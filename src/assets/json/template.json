@@ -1,0 +1,430 @@
+{
+	"menuList": [
+		{
+			"id": 0,
+			"menuId": "Item1",
+			"menuContentId": "section1",
+			"link": {
+				"href": "#",
+				"title": "Item1",
+				"target": ""
+			},
+			"className": "",
+			"content": { 
+				"menuRef": "section1",
+				"template": "section1.tmpl.html",
+				"class": "organizationAbout",
+				"header": "Item1",
+				"subtitle": "sample subheader",
+				"description" : [
+					{
+						"head": "The standard Lorem Ipsum passage, used since the 1500s",
+						"paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					},
+					{
+						"head": "Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC",
+						"paragraph": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+					}
+				]
+			}
+		},
+		{
+			"id": 2,
+			"menuId": "Item2",
+			"menuContentId": "section2",
+			"link": {
+				"href": "#",
+				"title": "Item2",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section2",
+				"template": "section2.tmpl.html",
+				"class": "shop",
+				"header": "Item2",
+				"subtitle": "Check out our products"
+			}
+		},
+		{
+			"id": 3,
+			"menuId": "Item3",
+			"menuContentId": "section3",
+			"link": {
+				"href": "#",
+				"title": "Item3",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section3",
+				"class": "team",
+				"header": "Item3",
+				"subtitle": "Meet our Team",
+				"members": [
+					{
+						"id": 1,
+						"name": "Reid Pilch",
+						"designation": "Managing Director"
+					},
+					{
+						"id": 2,
+						"name": "Kevin Qian",
+						"designation": "Principal of Consulting"
+					},
+					{
+						"id": 3,
+						"name": "Julia Loughlin",
+						"designation": "Principal of Human Resources"
+					},
+					{
+						"id": 4,
+						"name": "Walter Wong",
+						"designation": "Principal of Business Development"
+					}
+				]
+			}
+		},
+		{
+			"id": 4,
+			"menuId": "Item4",
+			"menuContentId": "section4",
+			"link": {
+				"href": "#",
+				"title": "Item4",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section4",
+				"template": "section4.tmpl.html",
+				"class": "contact",
+				"header": "Item4",
+				"subtitle": "Please fill out the following form and we will respond as soon as possible.",
+				"formElements": {
+					"action" : "/us/buy-iphone/iphone6",
+				    "method" : "get",
+				    "namespace" : "urls-aspen",
+				    "fields" : {
+					      "items" : [ 
+					      	{
+						        "index" : 1,
+						        "elemType": "input",
+						        "attributes" : {
+						          	"name":"name",
+									"type":"text",
+									"placeholder":"Enter your name",
+									"value":""
+						        }
+						    }, 
+						    {
+						        "index" : 2,
+						        "elemType": "input",
+						        "attributes" : {
+						          	"name":"phone",
+									"type":"text",
+									"placeholder":"Enter your phone number",
+									"value":""
+						        }
+					      	}, 
+						    {
+						        "index" : 3,
+						        "elemType": "input",
+						        "attributes" : {
+						          	"name":"email",
+									"type":"text",
+									"placeholder":"Enter your email address",
+									"value":""
+						        }
+					      	}, 
+						    {
+						        "index" : 4,
+						        "elemType": "input",
+						        "attributes" : {
+						          	"name":"submit",
+									"type":"submit",
+									"value":"Submit"
+						        }
+					      	}
+					    ]
+					}
+				}
+			}
+		},
+		{
+			"id": 5,
+			"menuId": "Item5",
+			"menuContentId": "section5",
+			"link": {
+				"href": "#",
+				"title": "Item5",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section5",
+				"template": "section5.tmpl.html",
+				"class": "blog",
+				"header": "Item5",
+				"subtitle": "Thoughts, musings, and ruminations.",
+				"blogs": [
+					{
+						"id":1,
+						"author": "Author1",
+						"topic": "accusamus et iusto odio dignissimos",
+						"description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+						"date": "Feb 17"
+					},
+					{
+						"id":2,
+						"author": "Author2",
+						"topic": "dolores eos qui ratione",
+						"description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+						"date": "June 8"
+					}
+				]
+			}
+		},
+		{
+			"id": 6,
+			"menuId": "Item6",
+			"menuContentId": "section6",
+			"link": {
+				"href": "#",
+				"title": "Item6",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section6",
+				"template": "section6.tmpl.html",
+				"class": "hero",
+				"header": "Item6",
+				"subtitle": "Introduce your product or service!",
+				"buyBtn": {
+					"index" : 1,
+			        "elemType": "button",
+			        "attributes" : {
+			          	"name":"Buy",
+						"type":"button",
+						"value":""
+			        }
+				},
+				"heroImage": {
+					"image": {
+						"src": "assets/images/hero.jpg",
+						"alt": "hero",
+						"title": ""
+					}
+				}
+			}
+		},
+		{
+			"id": 7,
+			"menuId": "Item7",
+			"menuContentId": "section7",
+			"link": {
+				"href": "#",
+				"title": "Item7",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section7",
+				"template": "section7.tmpl.html",
+				"class": "title",
+				"header": "Item7",
+				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+				"heroImage": {
+					"image": {
+						"src": "assets/images/hero.jpg",
+						"alt": "hero",
+						"title": ""
+					}
+				}
+			}
+		},
+		{
+			"id": 8,
+			"menuId": "Item8",
+			"menuContentId": "section8",
+			"link": {
+				"href": "#",
+				"title": "Item8",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section8",
+				"template": "section8.tmpl.html",
+				"class": "colContent",
+				"header": "Item8",
+				"subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+				"columns": [
+					{
+						"image": {
+							"src": "assets/images/hero.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"title": "Intro",
+						"tagline": "A small tagline",
+						"description": "voluptatem accusantium doloremque laudantium"
+					},
+					{
+						"image": {
+							"src": "assets/images/hero.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"title": "Intro",
+						"tagline": "A small tagline",
+						"description": "dolore magnam aliquam quaerat voluptatem"
+					},
+					{
+						"image": {
+							"src": "assets/images/hero.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"title": "Intro",
+						"tagline": "A small tagline",
+						"description": "adipisci velit, sed quia non numquam eius modi tempora"
+					}
+				]
+			}
+		},
+		{
+			"id": 9,
+			"menuId": "Item9",
+			"menuContentId": "section9",
+			"link": {
+				"href": "#",
+				"title": "Item9",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section9",
+				"template": "section9.tmpl.html",
+				"class": "rowContent",
+				"header": "Item9",
+				"subtitle": "Introduce your product or service!",
+				"rows": [
+					{
+						"image": {
+							"src": "assets/images/hero.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"title": "Intro",
+						"tagline": "A small tagline",
+						"description": "voluptatem accusantium doloremque laudantium"
+					},
+					{
+						"image": {
+							"src": "assets/images/hero.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"title": "Intro",
+						"tagline": "A small tagline",
+						"description": "dolore magnam aliquam quaerat voluptatem"
+					}
+				]
+			}
+		},
+		{
+			"id": 10,
+			"menuId": "Item10",
+			"menuContentId": "section10",
+			"link": {
+				"href": "#",
+				"title": "Item10",
+				"target": ""
+			},
+			"className": "",
+			"content": {
+				"menuRef": "section10",
+				"template": "section10.tmpl.html",
+				"class": "gallery",
+				"header": "Item10",
+				"subtitle": "Introduce your product or service!",
+				"gallery": [
+					{
+						"large": {
+							"src": "assets/images/hero_large.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"thumbnail": {
+							"src": "assets/images/hero_small.jpg",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"large": {
+							"src": "assets/images/hero_large.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"thumbnail": {
+							"src": "assets/images/hero_small.jpg",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"large": {
+							"src": "assets/images/hero_large.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"thumbnail": {
+							"src": "assets/images/hero_small.jpg",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"large": {
+							"src": "assets/images/hero_large.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"thumbnail": {
+							"src": "assets/images/hero_small.jpg",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"large": {
+							"src": "assets/images/hero_large.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"thumbnail": {
+							"src": "assets/images/hero_small.jpg",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"large": {
+							"src": "assets/images/hero_large.jpg",
+							"alt": "hero",
+							"title": ""
+						},
+						"thumbnail": {
+							"src": "assets/images/hero_small.jpg",
+							"alt": "hero",
+							"title": ""
+						}
+					}
+				]
+			}
+		}
+	]
+}

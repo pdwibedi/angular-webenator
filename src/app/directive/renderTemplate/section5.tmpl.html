@@ -1,0 +1,23 @@
+<div class="overlayWrapper">
+	<a href="#" class="btn closeOverlay" ng-click="closeOverlay('section5')"><i class="fa fa-times"></i></a>
+	<h2>Add a post </h2>
+	<form name="saveBlogPostUserForm" ng-submit="saveBlogPost(saveBlogPostUserForm.$valid, 'saveBlogPostUserForm')">
+		<article class="overlay-article">
+
+			<label>Author</label> 
+			<input type="text" name="author" value="" placeholder="Author's name ...." ng-model="newBlog.author" />
+
+			<input type="hidden" name="JSONIndex" id="" value="{{section.menuId}}" />
+			
+			<label>Blog Header</label> 
+			<input type="text" name="title" value="" placeholder="Post's title ...." ng-model="newBlog.topic" />
+
+			<label>Blog Description</label> 
+			<textarea name="description" placeholder="Post's Description ..." ng-model="newBlog.description"></textarea>
+
+		</article>
+
+		<input type="submit" class="btn" value="Save" />
+	</form>
+</div>
+<script>

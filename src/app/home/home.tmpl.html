@@ -1,0 +1,35 @@
+<div>
+    <!-- <form name="userForm" ng-submit="saveContact(userForm.$valid)">
+    <label>Name</label> 
+        <input type="text" required name="name" ng-model="newcontact.name"/>
+    <label>Email</label> 
+        <input type="text" name="email" ng-model="newcontact.email"/>
+    <label>Phone</label> 
+        <input type="text" name="phone" ng-model="newcontact.phone"/>
+        <input type="hidden" ng-model="newcontact.id" />
+     <input type="submit" value="Save" />
+    </form>
+    <table class="table table-bordered table-striped">
+        <thead> 
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contact in data.users">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>
+                    <a href="#" ng-click="edit(contact.id)">edit</a> | 
+                    <a href="#" ng-click="delete(contact.id)">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+    
+    <div ui-view="menu" menu-extender ng-data-model=""></div>
+</div> 

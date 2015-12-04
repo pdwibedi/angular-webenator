@@ -1,0 +1,17 @@
+<ul class="sideNav">
+	<li ng-repeat="(key, listItem) in data.menuList">
+		<i class="fa fa-bars"></i>
+		<a 
+			editable-context 
+			ng-data-model="listItem.menuId" 
+			element-type="text" 
+        	show-static-edit-link="true"
+        	show-edit-on-hover="false"
+			href="{{listItem.content.link.href}}"
+			title="{{listItem.content.link.title}}"
+			target="{{listItem.content.link.target}}">
+			{{listItem.menuId}}
+		</a>
+		<button class="deleteBtn" ng-click="deleteTemplate(key);"><i class="fa fa-times"></i></button>
+	</li>
+</ul>

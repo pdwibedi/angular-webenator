@@ -1,0 +1,5 @@
+<editable-context>
+	<div class="dynamicModelText" ng-show="!isReplyFormOpen" ng-click="enableEdit(editOnClick);">{{ngDataModel}}</div>
+	<textarea ng-model="ngDataModel" type="text" ng-show="isReplyFormOpen" ng-enter="doneEditing();"></textarea>
+	<button class="buttonLink" ng-click="isReplyFormOpen = !isReplyFormOpen">Edit</button>
+</editable-context>

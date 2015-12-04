@@ -1,0 +1,202 @@
+/* Default */
+.defaultTheme .editArea {
+	background-color: #efefef;
+}
+.defaultTheme .topNav {
+	border-bottom: solid 1px #dcddce;
+}
+.defaultTheme .topNav li a:hover {
+	background-color: #eeeedc;
+}
+.defaultTheme .topNav li a {
+    border: solid 1px #dcddce; 
+}
+.defaultTheme .topNav li:first-child a {
+    border-left: solid 1px #dcddce; 
+}
+.defaultTheme .editPage .editArea .siteContent .sections section {
+	border-color: #e2edeb;
+}
+.defaultTheme .contact .form {
+    border: solid 1px #dcddce;
+}
+.defaultTheme .contact .form input {	
+    border: solid 1px #dcddce;
+}
+.defaultTheme .blog .blogging > div {
+    border-top: solid 1px #dcddce;
+}
+.defaultTheme input[type='submit'], .defaultTheme button {
+	background-color: #eeeedc;
+	border: solid 1px #dcddce;
+}
+
+
+/* Blue */
+.blueTheme .editArea {
+	background-color: #e8f4f9;
+}
+.blueTheme .topNav {
+	border-bottom: solid 1px #bee0f0;
+}
+.blueTheme .topNav li a:hover {
+	background-color: #e8f4f9;
+}
+.blueTheme .topNav li a {
+    border: solid 1px #bee0f0; 
+}
+.blueTheme .topNav li:first-child a {
+    border-left: solid 1px #bee0f0; 
+}
+.defaultTheme .editPage .editArea .siteContent .sections section {
+	border-color: #e8f4f9;
+}
+.blueTheme .contact .form {
+    border: solid 1px #bee0f0;
+}
+.blueTheme .contact .form input {	
+    border: solid 1px #bee0f0;
+}
+.blueTheme .blog .blogging > div {
+    border-top: solid 1px #bee0f0;
+}
+.blueTheme input[type='submit'], .blueTheme button {
+	background-color: #e8f4f9;
+	border: solid 1px #bee0f0;
+}
+
+
+/* Pink */
+.pinkTheme .editArea {
+	background-color: #fcedf7;
+}
+.pinkTheme .topNav {
+	border-bottom: solid 1px #f4c2e4;
+}
+.pinkTheme .topNav li a:hover {
+	background-color: #fcedf7;
+}
+.pinkTheme .topNav li a {
+    border: solid 1px #f4c2e4; 
+}
+.pinkTheme .topNav li:first-child a {
+    border-left: solid 1px #f4c2e4; 
+}
+.defaultTheme .editPage .editArea .siteContent .sections section {
+	border-color: #fcedf7;
+}
+.pinkTheme .contact .form {
+    border: solid 1px #f4c2e4;
+}
+.pinkTheme .contact .form input {	
+    border: solid 1px #f4c2e4;
+}
+.pinkTheme .blog .blogging > div {
+    border-top: solid 1px #f4c2e4;
+}
+.pinkTheme input[type='submit'], .pinkTheme button {
+	background-color: #fcedf7;
+	border: solid 1px #f4c2e4;
+}
+
+
+/* Yellow */
+.yellowTheme .editArea {
+	background-color: #f4f3a7;
+}
+.yellowTheme .topNav {
+	border-bottom: solid 1px #d1d08e;
+}
+.yellowTheme .topNav li a:hover {
+	background-color: #f4f3a7;
+}
+.yellowTheme .topNav li a {
+    border: solid 1px #d1d08e; 
+}
+.yellowTheme .topNav li:first-child a {
+    border-left: solid 1px #d1d08e; 
+}
+.defaultTheme .editPage .editArea .siteContent .sections section {
+	border-color: #f4f3a7;
+}
+.yellowTheme .contact .form {
+    border: solid 1px #d1d08e;
+}
+.yellowTheme .contact .form input {	
+    border: solid 1px #d1d08e;
+}
+.yellowTheme .blog .blogging > div {
+    border-top: solid 1px #d1d08e;
+}
+.yellowTheme input[type='submit'], .yellowTheme button {
+	background-color: #f4f3a7;
+	border: solid 1px #d1d08e;
+}
+
+
+/* Charcoal */
+.charcoalTheme .editArea {
+	background-color: #e5e5e5;
+}
+.charcoalTheme .topNav {
+	border-bottom: solid 1px #b5b5b5;
+}
+.charcoalTheme .topNav li a:hover {
+	background-color: #e5e5e5;
+}
+.charcoalTheme .topNav li a {
+    border: solid 1px #b5b5b5; 
+}
+.charcoalTheme .topNav li:first-child a {
+    border-left: solid 1px #b5b5b5; 
+}
+.defaultTheme .editPage .editArea .siteContent .sections section {
+	border-color: #e5e5e5;
+}
+.charcoalTheme .contact .form {
+    border: solid 1px #b5b5b5;
+}
+.charcoalTheme .contact .form input {	
+    border: solid 1px #b5b5b5;
+}
+.charcoalTheme .blog .blogging > div {
+    border-top: solid 1px #b5b5b5;
+}
+.charcoalTheme input[type='submit'], .charcoalTheme button {
+	background-color: #e5e5e5;
+	border: solid 1px #b5b5b5;
+}
+
+
+/* Purple */
+.purpleTheme .editArea {
+	background-color: #ecebf7;
+}
+.purpleTheme .topNav {
+	border-bottom: solid 1px #c9c7e8;
+}
+.purpleTheme .topNav li a:hover {
+	background-color: #ecebf7;
+}
+.purpleTheme .topNav li a {
+    border: solid 1px #c9c7e8; 
+}
+.purpleTheme .topNav li:first-child a {
+    border-left: solid 1px #c9c7e8; 
+}
+.defaultTheme .editPage .editArea .siteContent .sections section {
+	border-color: #ecebf7;
+}
+.purpleTheme .contact .form {
+    border: solid 1px #c9c7e8;
+}
+.purpleTheme .contact .form input {	
+    border: solid 1px #c9c7e8;
+}
+.purpleTheme .blog .blogging > div {
+    border-top: solid 1px #c9c7e8;
+}
+.purpleTheme input[type='submit'], .purpleTheme button {
+	background-color: #ecebf7;
+	border: solid 1px #c9c7e8;
+}

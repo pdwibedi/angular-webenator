@@ -1,0 +1,9 @@
+<button>Add</button>
+<div class="templateList">
+	<ul>
+		<li ng-repeat="menuItem in menuStack.menuList">
+			<input type="radio" name="sideMenu" value="{{menuItem.menuContentId}}" />
+			<span>{{menuItem.content.class}}</span>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,798 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    min-height: 100%;
+}
+
+.app-wrap {
+}
+.nav-wrap {
+    height:65px;
+}
+
+ul.nav li a.btn {
+    text-align: left;
+}
+
+input, input:focus, textarea { outline: none !important; width: 100%; line-height: 18px }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+.navbar-brand {
+    padding: 0;
+    padding-top: 5px;
+}
+
+.navbar-brand h1 {
+    margin: 0 
+}
+
+@media (max-width: 767px) {
+  .collapsing, .collapse.in {
+    z-index: 2;
+    position: relative;
+    border: 10px solid #f5ead9;
+  }
+}
+
+
+/* Common styles STARTS  */
+
+.contentBox {
+    display: block;
+}
+.contentBox button {
+    display: inline-block;
+    opacity: 0;
+}
+.hide {
+    display: none
+}
+.buttonLink {
+    border: 0;
+    background: none;
+}
+.inline-mode {
+    display: inline-block;
+}
+.addBtnCombo {
+    display: inline-block;
+    padding: 11px 15px;
+    vertical-align: top;
+    font-size: 20px;
+}
+.defaultDark {
+    color: #000;
+}
+.defaultDark editable-context input, .defaultDark editable-context textarea, .defaultDark editable-context button {
+    color: #000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.defaultBright {
+    color: #fff
+}
+.defaultBright input, .defaultBright textarea, .defaultBright button {
+    color: #000;
+}
+.backgroundChooser {
+    position: absolute; 
+    right: 10px;
+    top: 10px;
+    display: inline-block;
+    width: 80px;
+}
+
+.imageReplace {
+    position: absolute !important;
+    width: auto !important;
+    right: 10px;
+    top: 10px;
+
+}
+.imageReplace button {
+    
+}
+
+
+.flexible-section {
+    border: solid 1px grey !important;
+    border-radius: 3px;
+    position: relative;
+}
+.deleteRowBtn {
+    display: none
+}
+.flexible-section .deleteRowBtn {
+    display: block !important;
+    position: absolute;
+    right: 0; top: 0;
+    background-color: black;
+    color: #fff;
+    border: 0;
+    padding: 3px 5px;
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+}
+
+.dropdown-menu-icon {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.balloonFlyOut {
+    display: none;
+    position: absolute;
+    min-width: 240px;
+    top: 88%;
+    left: 3px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    background-clip: padding-box;  
+    padding-top: 8px;
+    -webkit-transition: all .5s; /* Safari */
+    transition: all .5s;
+}
+.balloonFlyOut:before {
+    content: " ";
+    position: absolute;
+    left: 12px;
+    top: -8px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #e2edeb;
+}
+.balloonFlyOut .panel-heading {
+    color: #3D4051;
+    background-color: #e2edeb;
+}
+
+
+.bubbleInfo {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    min-width: 120px;
+    border-radius: 3px;
+    background: #262B33;
+}
+.bubbleInfo > a {
+    padding: 10px 7px;
+    color: #fff;
+    display: inline-block;
+}
+.bubbleInfo > div {
+    height: 200px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+}
+/* Common styles ENDS  */
+
+/* Edit section here */
+.editPage {
+
+}
+.editPage .sideRail {
+    padding: 0;
+    overflow: hidden;
+}
+.editPage .sideRail > * {
+    margin: 10px;
+}
+.editPage .sideBar {
+    width: 220px;
+    min-height: 300px;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+    float: left;
+    margin-top: 0;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 52px;
+    background-color: #262B33;
+    color: #ccc;
+    margin-bottom: -2500px;
+    padding-bottom: 2500px
+}
+.dynamicMenuWrapper {
+    white-space: nowrap;
+}
+.editPage .sideBar button.btn {
+    line-height: 12px;
+    margin-left: 0px;
+    background: none;
+    border: 0;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+.editPage .sideBar > div > .fa {
+    margin-left: 10px;
+    margin-right: 6px;
+}
+.editPage .sideBar > div > .fa:before {  
+    position: relative;
+    top: 2px;
+}
+.editPage .sideBar.collapsed {
+    width: 0;
+}
+.editPage .sideBar.collapsed + .editArea {
+    margin-left: 0
+}
+.editPage .sideBar .sliderToggleBtn {
+    color: #000;
+    position: absolute;
+    right: -32px;
+    top: 20px;  
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 3px 10px;
+    background-color: #d5d5d5;
+}
+.editPage .accordionWrapper {
+    overflow: hidden;
+}
+.editPage .accordionheader {
+    margin: 15px 10px;
+    font-size: 16px;
+    position: relative;
+    min-width: 200px;
+}
+.editPage .accordionheader span {
+    position: absolute;
+    right: 4px;
+    top: 0;
+}
+.editPage .accordionheader a {
+    text-decoration: none;
+    display: inline-block;
+    color: #ccc;
+    color: rgba(255,255,255,0.5);
+}
+.editPage .accordionheader a:before {
+    margin-right: 10px;
+    font-size: 16px;
+    padding-left: 7px;
+    -webkit-transition: font-size 1s; /* Safari */
+    transition: font-size 1s;
+}
+.editPage .collapsed .accordionheader a:before {
+    margin-right: 10px;
+    font-size: 24px;
+    padding-left: 7px;
+}
+.editPage .accordionheader.fa-chevron-right a {
+    padding-left: 5px;
+}
+.sideBar .options {
+    border-bottom: solid 1px #1b1f24;
+    white-space: nowrap;
+}
+.sideBar .options .optionContent {
+    margin: 0 10px;
+    padding: 0 2px;
+}
+
+.sideBar .options .optionContent li {
+    padding: 5px 0;
+    display: table;
+}
+.sideBar .options .optionContent li input, .sideBar .options .optionContent li label {
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    line-height: 24px;
+}
+.sideBar .options .optionContent li input {
+    margin-right: 20px;
+}
+.themeOptions {
+
+}
+.options.themeOptions .textColor li {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.options.themeOptions .textColor li input {
+    position: absolute;
+    left: -20px;
+}
+.themeOptions .textColor li label {
+    position: relative;
+    padding-left: 18px;
+    width: 15px;
+    overflow: hidden;
+}
+.themeOptions .textColor li label:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+}
+.themeOptions .textColor li input[value='defaultDark'] + label:before {
+    background-color: #000;
+}
+.themeOptions .textColor li input[value='defaultBright'] + label:before {
+    background-color: #fff;
+}
+
+
+/* Nav bar */
+
+.editPage .sideBar .sideNav {
+    overflow: hidden;
+}
+.editPage .sideBar .sideNav li {
+    padding: 0;
+    list-style: none;
+
+}
+.editPage .sideBar .sideNav li  {
+    display: table;
+}
+.editPage .sideBar .sideNav li a {
+    display: table-cell;
+    vertical-align: middle;
+    text-decoration: none;
+    color: inherit;
+}
+.editPage .sideBar .sideNav .fa {
+    margin-right: 10px;
+    display: inline-block;
+    padding-top: 6px;
+}
+.editPage .sideBar .sideNav li > button {
+    display: none;
+    background: none;
+    border: 0;
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -7px;
+    vertical-align: middle;
+}
+.editPage .sideBar .sideNav li a input {
+    width: 100%
+}
+.editPage .sideBar .sideNav .dynamicModelText{
+    line-height: 25px
+}
+.editPage .sideBar .sideNav .buttonLink {
+    font-size: 10px;
+    line-height: 28px;
+    text-transform: uppercase;
+    border: 0;
+    background: none;
+    display: block;
+} 
+.templateList .wrap {
+    padding: 10px;
+    overflow: auto;
+    width: 238px;
+}
+
+.templateList .wrap .scrollContainer {
+    overflow: scroll;
+    margin: 0;
+    padding: 5px;   
+}
+.templateList h3 {
+    margin: 0 0 20px;
+}
+.templateList .wrap .thumbnailStyle {
+    margin-top: 10px;
+}
+.templateList .wrap .thumbnailStyle label {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: block;
+    white-space: normal;
+}
+.templateList .wrap .thumbnailStyle label a {
+    display: inline-block;
+    position: relative;
+}
+.templateList .wrap .thumbnailStyle label a:hover:after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 119px;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+}
+.templateList .wrap .thumbnailStyle label:hover {
+
+}
+.templateList .wrap .thumbnailStyle label span {
+    text-transform: capitalize;
+    display: block;
+    line-height: 32px;
+}
+.templateList .wrap .thumbnailStyle input[type=radio] {
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 70px;
+}
+.templateList .wrap .thumbnailStyle input {
+    margin: 3px
+}
+.templateList .wrap .thumbnailStyle label a:hover:after {
+    background-color: #000;
+}
+
+/* Main Area */
+.editPage .editArea {
+    -webkit-transition: margin 1s; /* Safari */
+    transition: margin 1s;
+    margin-left: 220px;
+    height: 100%;
+}
+.editPage .editArea .topNav {
+    text-align: left;
+    height: 52px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: all 1s ease; /* Safari */
+    transition: all 1s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+}
+.editPage .editArea .topNav .logo {
+    width: 220px;
+    height: 52px;
+    -webkit-transition: width 1s; /* Safari */
+    transition: width 1s;
+    background-color: #009688;
+    color: #fff;
+    display: inline-block;
+}
+.editPage .editArea .topNav .sliderToggleBtn {
+    display: inline-block;
+    padding: 11px 15px;
+    vertical-align: top;
+    font-size: 20px;
+}
+.editPage .editArea .topNav ul {
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 0;
+
+}
+.editPage .editArea .topNav li {
+    float: left;
+}
+.editPage .editArea .topNav li:first-child {
+    padding-left: 0;
+    margin-top: 0;
+}
+.editPage .editArea .topNav li a {
+    padding: 15px;
+    display: inline-block;
+    border-bottom: 0;
+    border-left: 0;
+}
+.editPage .editArea .topNav li a {
+    text-decoration: none;
+}
+.editPage .editArea .siteContent {
+    float: none;
+    padding-top: 58px;
+}
+
+/* Section Common structure */
+.editPage .editArea .siteContent .sections section {
+    padding: 50px 0;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    margin: 10px 15px 15px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    position: relative;
+}
+.editPage .editArea .siteContent section > div {
+    width: 736px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.editPage .editArea .siteContent section h2, .editPage .editArea .siteContent section h2 * {
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+}
+.editPage .editArea .siteContent section .subTitle, .editPage .editArea .siteContent section .subTitle * {
+    font-size: 16px;
+    text-align: center;   
+}
+.editPage .editArea .siteContent section h3 {
+    margin-bottom: 0
+}
+.editPage .editArea .siteContent section h4 {
+    font-size: 20px;
+    margin: 0
+}
+.editPage .editArea .siteContent section h5 {
+    font-size: 18px;
+}
+
+
+/* organizationAbout */
+.organizationAbout {
+    
+}
+.organizationAbout .description {
+    margin-top: 0px;
+    text-align: left;
+}
+.organizationAbout .description article {
+    padding: 10px;
+    border: solid 1px transparent;
+}
+.organizationAbout .description p {
+    font-size: 14px;
+    margin-bottom: 0
+}
+/* shop */
+.shop {
+    margin: 50px auto;
+}
+.productContainer {
+    height: 150px;
+    display: block;
+    margin-top: 40px;
+    padding: 5px;
+    background-color: #dedede;
+    border: solid 1px #d34343;
+}
+/* Team */
+.team {
+    margin: 50px auto;
+}
+.team .teamMembers {
+    overflow: hidden;
+    margin-top: 30px;
+}
+.team .teamMembers > div {
+    float: left;
+    width: 50%;
+    min-height: 50px;
+    border: solid 1px transparent;
+}
+.team .teamMembers > div > span {
+    display: block;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: left;
+    border: solid 1px #d5d5d5;
+    background-color: #fff;
+}
+.team .teamMembers > div > span p {
+    font-weight: lighter
+}
+
+/* contact form */
+.contact {
+    margin: 50px auto;
+}
+.contact .form {
+    margin: 30px 70px 0;
+    padding: 20px;
+}
+.contact .form input {
+    display: inline-block;
+    line-height: 34px;
+    padding: 0 10px;
+    width: 410px;
+    margin: 5px;
+    border-radius: 7px;
+    color: #d3d3d3;
+}
+.contact .form input[type="submit"] {
+    width: auto;
+    color: #000;
+} 
+
+/* Blog */
+.blog {
+    margin: 50px auto;
+}
+.blog .blogging {
+    text-align: left;
+}
+.blog .blogging > div {
+    margin-top: 0px;
+    padding: 10px 5px;
+}
+.blog .blogging > div:first-child {
+    border-top: 0;
+    margin-top: 0px;
+}
+.blog .blogging > div > span {
+    font-size: 14px;
+    font-style: italic;
+    color: green;
+}
+.blog .blogging .details p, .blog .blogging .details p * {
+    line-height: 18px
+}
+
+/* Hero */
+.hero {
+    overflow: hidden;
+}
+.hero .tile {
+    float: left;
+    width: 50%;
+    padding-top: 180px;
+    text-align: left;
+}
+.hero .tile button {
+    border: 0;
+    padding: 8px 35px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.hero .heroImg {
+    display: block;
+    border: solid 1px red;
+    border-radius: 10px;
+    width: 260px;
+    height: 510px;
+    float: left;
+    margin-left: 70px;
+}
+.hero .tile .subTitle {
+    color: #77b300;
+}
+
+/* Title */
+.title {
+
+}
+.title .heroImg {
+    width: 480px;
+    height: 360px;
+    margin: 0 auto 30px; 
+    border: solid 1px red;
+}
+/* colContent */
+.colContent {
+    overflow: hidden
+}
+.colContent .column {
+    overflow: hidden;   
+}
+.colContent .column > div {
+    width: 30%;
+    float: left;
+    margin: 12px;
+}
+.colContent .column .heroImg {
+    height: 120px;
+    margin: 6px;
+    border: solid 1px red;
+}
+.colContent .column .wrap {
+
+}
+.colContent .column .wrap .tagline {
+    font-size: 16px;
+    font-style: italic;
+    color: #99cc00;
+}
+.colContent .column p, .colContent .column p * {
+    line-height: 18px;
+    min-height: 70px;
+    text-align: center;
+}
+.colContent .column h3, .colContent .column h3 * {
+    text-align: center;
+}
+
+
+/* rowContent */
+.rowContent {
+    overflow: hidden
+}
+.rowContent .row {
+    overflow: hidden;
+    margin: 0;
+}
+.rowContent .row > div {
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    margin: 30px 0;
+}
+.rowContent .row .heroImg {
+    height: 120px;
+    border: solid 1px red;
+    float: right;
+    width: 230px;
+    position: relative;
+    top: 0;
+
+}
+.rowContent .row .wrap {
+    position: relative;
+    top: -20px;
+    width: 480px;
+}
+.rowContent .row .wrap .tagline {
+    color: #99cc00;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+}
+.rowContent .row p, .rowContent .row p * {
+    line-height: 18px;
+    min-height: 70px;
+    text-align: center;
+}
+
+
+/* Gallery */
+.gallery {
+
+}
+.gallery .imageStack {
+    overflow: hidden;
+}
+.gallery .imageStack li {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    border: solid 1px red;
+}
+.gallery .imageStack li:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: #dedede;
+}

@@ -1,0 +1,82 @@
+<div class="editPage {{data.theme}}">
+	<div class="sideBar">
+		<div class="accordionWrapper">
+			<div class="options dynamicMenuWrapper">
+				<h4 accordion-menu class="accordionheader">
+					<a href="#" class="fa fa-bars"> Sections</a>
+					<span class="fa fa-chevron-right"></span>
+				</h4>
+				<div class="optionContent sideRail" style="display: none;">
+					<div ui-view="sideNav"></div>
+				</div>
+			</div>
+			<div class="options themeOptions">
+				<h4 accordion-menu class="accordionheader">
+					<a href="#" class="fa fa-windows"> Theme</a>
+					<span class="fa fa-chevron-right"></span>
+				</h4>
+				<div class="contentWrapper" style="display: none;">
+					<ul class="optionContent themes">
+						<li>
+							<input type="radio" name="theme" checked value="defaultTheme" id="defaultTheme">
+							<label for="defaultTheme">Default</label>
+						</li>
+						<li>
+							<input type="radio" name="theme" value="pinkTheme" id="pinkTheme">
+							<label for="pinkTheme">Pink</label>
+						</li>
+						<li>
+							<input type="radio" name="theme" value="yellowTheme" id="yellowTheme">
+							<label for="yellowTheme">Yellow</label>
+						</li>
+						<li>
+							<input type="radio" name="theme" value="charcoalTheme" id="charcoalTheme">
+							<label for="charcoalTheme">Charcoal</label>
+						</li>
+						<li>
+							<input type="radio" name="theme" value="blueTheme" id="blueTheme">
+							<label for="blueTheme">Blue</label>
+						</li>
+						<li>
+							<input type="radio" name="theme" value="purpleTheme" id="purpleTheme">
+							<label for="purpleTheme">Purple</label>
+						</li>
+					</ul>
+					<h3>Text Color</h3>
+					<ul class="optionContent textColor">
+						<li>
+							<input type="radio" name="textColor" checked value="defaultDark" id="defaultDark">
+							<label for="defaultDark">Dark</label>
+						</li>
+						<li>
+							<input type="radio" name="textColor" selected value="defaultBright" id="defaultBright">
+							<label for="defaultBright">Bright</label>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<div class="options">
+				<h4 accordion-menu class="accordionheader">
+					<a href="#" class="fa fa-eye"> Preview</a>
+					<span class="fa fa-chevron-right"></span>
+				</h4>
+				<ul class="optionContent" style="display: none;">
+					<li>
+						<input type="radio" name="preview" selected value="default" id="default">
+						<label for="default" class="fa fa-desktop">Default</label>
+					</li>
+					<li>
+						<input type="radio" name="preview" selected value="mobile" id="mobile">
+						<label for="mobile" class="fa fa-mobile">Mobile</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="editArea">
+		<div class="topNav" ui-view="topNav"></div>
+		<div class="siteContent" ui-view="siteContent"></div>
+		
+	</div>
+</div>

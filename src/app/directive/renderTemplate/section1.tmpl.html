@@ -1,0 +1,19 @@
+<div class="overlayWrapper">
+	<a href="#" class="btn closeOverlay" ng-click="closeOverlay('section1')"><i class="fa fa-times"></i></a>
+	<h2>Add an article </h2>
+	<form name="userform" ng-submit="saveArticle(userform.$valid)">
+		<article class="overlay-article">
+
+			<label>Header</label> 
+			<input type="text" name="header" value="" placeholder="Type your article header here ...." ng-model="newArticle.head" />
+
+			<label>Description</label> 
+			<textarea name="description" placeholder="Type your description here ..." ng-model="newArticle.paragraph"></textarea>
+
+		</article>
+
+		<input type="submit" class="btn" value="Save" />
+	</form>
+</div>
+
+

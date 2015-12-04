@@ -1,0 +1,206 @@
+/* Miniature HTML */
+
+/* ***************    COMMON STYLES   ******************** */
+.templateList {
+    overflow: scroll;
+    margin: 0;
+    -webkit-transition: width .25s; /* Safari */
+    transition: width .25s;
+    z-index: 1;
+    background-color: #fff;
+    height: 360px;
+}
+.editPage .editArea .topNav .templateList li {
+    float: none;
+}
+.editPage .sideBar .templateList .templateSlideCloseBtn {
+    position: absolute; top: 10px; right: 10px; background: none; border: 0; display: none;   font-size: 26px;
+}
+.miniature {
+    border: solid 1px #dedede;
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.miniature * {
+    font-size: 10px !important;
+    margin: 0;
+    padding: 0;
+    line-height: 14px !important;
+}
+.miniature .addKey {
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    left: 42%;
+    top: 42%;
+    display: none;
+    padding: 5px 10px 7px;
+    border: 0;
+    border-radius: 5px;
+}
+.miniature.hover .screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.7
+}
+.miniature.hover .addKey {
+    display: block
+}
+.miniature h2 {
+    text-align: center;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.miniature h5 {
+    color: #000;
+}  
+.miniature h3 {
+    margin-bottom: 0 !important;
+}
+.miniature h3 {
+    margin-bottom: 3px;
+}
+.miniature .subTitle {
+    text-align: center;
+    font-style: italic;
+}
+.miniature label {
+    width: 100%;
+}
+.miniature .wrap {
+    width: auto !important;
+    overflow: hidden !important;
+}
+
+
+.miniature .description {
+    margin-top: 10px
+}
+.miniature .description article {
+    margin: 5px 0 0;
+}
+.miniature .description p {
+    color: #999
+}
+
+
+.miniature .shop a {
+  width: 100%;
+  height: 75px;
+  margin-top: 12px;
+}
+
+
+.miniature .team .teamMembers {
+    margin-top: 10px
+}
+.miniature .team .teamMembers > div > span {
+    padding: 5px;
+    display: block;
+    margin: 5px;
+}
+
+
+.miniature .contact .form {
+    margin: 10px 0 0;
+    padding: 0
+}
+.miniature .contact .form input {
+    width: 97%;
+    border-radius: 4px;
+    font-size: 7px !important;
+    margin: 3px;
+}
+.miniature .contact .form input[type='submit'] {
+    width: 28%
+}
+
+
+.miniature .blog .blogging > div:first-child {
+    margin-top: 0px
+}
+.miniature .blog .blogging > div {
+    margin-top: 5px;
+    padding-top: 3px;
+}
+
+
+.miniature .hero {
+    padding: 10px !important;
+}
+.miniature .hero .tile {
+    padding-top: 16px; 
+}
+.miniature .hero .heroImg {
+    width: 50px;
+    height: 100px;
+    float: none;
+    margin-left: 120px
+}
+.miniature .hero .tile button {
+    margin-left: 20px;
+    padding: 4px 23px;
+    border-radius: 6px;
+}
+
+
+.miniature .title .heroImg {
+    width: 120px;
+    height: 90px;
+    margin: 10px auto 10px;
+}
+
+
+.miniature .colContent .column .heroImg {
+    height: 42px;
+    margin: 6px;
+}
+.miniature .colContent .column > div {
+    margin: 3px;
+}
+
+.miniature .rowContent .row .heroImg {
+    height: 40px;
+    width: 40px;
+}
+.miniature .rowContent .row .wrap {
+    top: 0px;
+    width: 150px;
+    padding: 0 !important;
+}
+.miniature .rowContent .row > div {
+    margin: 5px 0;
+}
+
+
+.miniature .gallery .imageStack {
+    width: 180px;
+    margin: 10px auto 5px;
+}
+.miniature .gallery .imageStack li {
+    width: 31px;
+    height: 20px;
+    margin: 5px;
+    float: left !important;
+}
+.miniature .gallery .imageStack li:first-child {
+    margin-top: 5px
+}
+.miniature .rowContent .row {
+    padding: 10px; 
+}
+.miniature .rowContent .row > div {
+    height: 70px
+}
+.miniature .rowContent .row > div p, .miniature .rowContent .row > div p * {
+    text-align: left;
+    min-height: 20px
+}
+.miniature .gallery li {
+    float: left
+}

@@ -1,0 +1,100 @@
+.siteContent section editable-context{
+    border: solid 1px transparent;
+    display: block;
+    line-height: 34px;
+}
+.siteContent section editable-context.editor {
+    border-radius: 3px;
+    border: solid 1px #303030;
+}
+.siteContent section h2 editable-context.editor {
+    margin-top: -5px;
+    margin-bottom: -4px
+}
+.siteContent section .editor input {
+    /*background: none;*/
+    border: none;
+    text-align: inherit;
+    width: 100%;
+    line-height: 34px;
+}
+.siteContent section .editor textarea {
+	width: 100%;
+	line-height: 18px;
+	resize: none;
+	border: none;
+	min-height: 50px;
+	/*background: none;*/
+}
+
+/* organizationAbout */
+.organizationAbout .description .dynamicModelText {
+	line-height: 18px
+}
+.organizationAbout .description h5 .dynamicModelText {
+	line-height: 34px
+}
+.organizationAbout .addBtn {
+	display: block;
+	margin: 20px auto 0; 
+}
+.organizationAbout .addBtn .fa {
+	margin-right: 10px
+}
+
+/* Overlay Styles */
+
+overlay-component {
+	position: fixed;
+	z-index: 99;
+	width: 736px;
+	-webkit-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.55);
+	-moz-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.55);
+	box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.55);
+	border: solid 1px #e0e0e0;
+	background-color: #fff;
+	display: none;
+	color: #000;
+}
+overlay-component .closeOverlay {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+overlay-component h2 {
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: solid 1px #c5c5c5;
+}
+.overlayScreen {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;  
+	z-index: 20;
+  	background-color: #000;
+  	opacity: 0.5;
+}
+overlay-component .overlayWrapper {
+	padding: 10px;
+}
+overlay-component label, overlay-component input, overlay-component textarea {
+	display: block;
+	width: 100%;
+	margin: 10px 0;
+	border: solid 1px #dedede;
+	border-radius: 7px;
+	padding: 10px 5px;
+	text-align: left;
+}
+overlay-component label {
+	border: 0;
+	padding: 0 5px
+}
+overlay-component textarea {
+	height: 100px;
+}
+
+
+

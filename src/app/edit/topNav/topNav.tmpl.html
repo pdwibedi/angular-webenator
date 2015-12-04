@@ -1,0 +1,39 @@
+<div class="logo"></div>
+<a href="javascript:void(0);" class="sliderToggleBtn"><i class="fa fa-cog"></i></a>
+<div class="dropdown-menu-icon">
+	<a href="javascript:void(0);" class="addBtnCombo" ng-click="showTemplateFlyOut();"><i class="fa fa-plus"></i></a>
+	<div class="balloonFlyOut">
+		<div class="panel-heading"> <span>Add a new section</span></div>
+		<div class="templateList">
+			<div class="wrap">
+				<div class="scrollContainer">
+					<ul>
+						<li class="thumbnailStyle" ng-repeat="(key, menuItem) in menuStack.menuList">
+							<input type="radio" name="sideMenu" value="{{menuItem.menuContentId}}" />
+							<label>
+								<span>{{menuItem.content.class}}</span>
+								<div 
+									render-template-miniature
+									class="miniature" 
+									></div>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<ul>
+	<li ng-repeat="listItem in data.menuList">
+		<a 
+			href="javascript:void(0);"
+			data="#{{listItem.content.menuRef}}" 
+			title="{{listItem.content.link.title}}" 
+			target="{{listItem.content.link.target}}">
+			{{listItem.menuId}}
+		</a>
+	</li>
+</ul>
+
+
