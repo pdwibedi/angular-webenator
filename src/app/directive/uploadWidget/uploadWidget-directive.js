@@ -1,51 +1,57 @@
 angular.module('angularTest')
-  .directive('fileModel', ['$parse', function ($parse) {
+  .directive('fileModel', function ($parse, USER_UPLOADS) {
+    var createImgElem, setTarget;
     return {
         restrict: 'A',
+        scope: {
+          setTarget: '@',
+          createImgElem: '@'
+        },
         link: function(scope, element, attrs) {
             var model = $parse(attrs.fileModel),
-                modelSetter = model.assign;
-            element.bind('change', function(){  
+                modelSetter = model.assign,
+                filePath;
+            // createImgElem = (Boolean(scope.createImgElem)) ? Boolean(scope.createImgElem) : false;
+            // setTarget = (scope.setTarget) ? scope.setTarget : $(element).parent();
 
-                show_image_preview(element, attrs.setTarget);
+            element.on('change', function(){
+                show_image_preview(element, scope.setTarget, JSON.parse(scope.createImgElem));
                 scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
+                  filePath = USER_UPLOADS + element[0].files[0].lastModified + element[0].files[0].name;
+                  modelSetter(scope, filePath);
                 });
             });
-
         },
         controller: function($scope, $element) {
           
-          show_image_preview = function(file_selector, target) {
+          show_image_preview = function(file_selector, target, createImgElem) {
             var files = file_selector[0].files,
-            imageContainer,
+            imageContainer = $(target),
             imagePreview = $('<div class="imageReplace"><input type="button" value="Clear BG" title="Remove Image" class="removeImageButton" onclick="remove_selected_image(this)" /></div>');
             
-            if(target === undefined) {
-              imageContainer = $($element).parents("section");
-            }
-            $(imageContainer).append(imagePreview);
-
             for (var i = 0; i < files.length; i++) {
               var file = files[i];
 
-              // var img = document.createElement("img");
-              // var preview = $(imageContainer).find(".imageReplace");
-              // preview.prepend(img);
-              // preview.find('img').addClass('previewImage').css({'max-width': '500px', 'max-height': '500px'});
+              var img = document.createElement("img");
+              $(img).css({"width": $(imageContainer).width(), "height": $(imageContainer).height()});
 
               var reader = new FileReader();
-              reader.onload = (function(imageContainer) { 
+              reader.onload = (function(imageContainer, createImgElem) { 
                 return function(e) { 
-                  // aImg.src = e.target.result;
-                  imageContainer.css({
-                    'background-image': 'url(' + e.target.result + ')',
-                    'background-repeat': 'no-repeat',
-                    'background-size': '100% auto',
-                    'background-position': 'center center'
-                  });
+                  if(createImgElem) {
+                    img.src = e.target.result;
+                    $(imageContainer).append(img);  
+                  } else {
+                    $(imageContainer).append(imagePreview);
+                    imageContainer.css({
+                      'background-image': 'url(' + e.target.result + ')',
+                      'background-repeat': 'no-repeat',
+                      'background-size': '100% auto',
+                      'background-position': 'center center'
+                    });
+                  }
                 }; 
-              })(imageContainer);
+              })(imageContainer, createImgElem);
               reader.readAsDataURL(file);
             }
             $(imageContainer).show();
@@ -59,4 +65,4 @@ angular.module('angularTest')
 
         }
     };
-}]);
+});

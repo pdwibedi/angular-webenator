@@ -3,9 +3,10 @@
 angular.module('angularTest', [
   'ui.router'
 ])
-  .constant('ENDPOINT_URI', './')
-  .constant('DIRECTIVE_URI', './app/directive/')
-  .constant('SITE_SECTION_URI', './app/edit/')
+  .constant('ENDPOINT_URI', './src/')
+  .constant('DIRECTIVE_URI', './src/app/directive/')
+  .constant('SITE_SECTION_URI', './src/app/edit/')
+  .constant('USER_UPLOADS', './src/assets/userUploads/')
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/edit');
 
@@ -14,13 +15,13 @@ angular.module('angularTest', [
         url:'/home',
         views: {
           '': { 
-            templateUrl: 'app/home/home.tmpl.html',
+            templateUrl: 'src/app/home/home.tmpl.html',
             controller: 'HomeCtrl',
             controllerAs: 'home'
           },
           // the child views will be defined here (absolutely named)
           'menu@home': { 
-            templateUrl: 'app/home/nav.tmpl.html' 
+            templateUrl: 'src/app/home/nav.tmpl.html' 
           }
         }
       })
@@ -28,18 +29,18 @@ angular.module('angularTest', [
         url:'/edit',
         views: {
           '': { 
-            templateUrl: 'app/edit/edit.tmpl.html',
+            templateUrl: 'src/app/edit/edit.tmpl.html',
             controller: 'EditCtrl',
             controllerAs: 'edit'
           },
           'sideNav@edit': { 
-            templateUrl: 'app/edit/sideNav/sideNav.tmpl.html'
+            templateUrl: 'src/app/edit/sideNav/sideNav.tmpl.html'
           },
           'topNav@edit': { 
-            templateUrl: 'app/edit/topNav/topNav.tmpl.html'
+            templateUrl: 'src/app/edit/topNav/topNav.tmpl.html'
           },
           'siteContent@edit': {
-            templateUrl: 'app/edit/siteContent/siteContent.tmpl.html'
+            templateUrl: 'src/app/edit/siteContent/siteContent.tmpl.html'
           }
         }
       })

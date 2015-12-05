@@ -212,7 +212,7 @@
 				},
 				"heroImage": {
 					"image": {
-						"src": "assets/images/hero.jpg",
+						"src": "",
 						"alt": "hero",
 						"title": ""
 					}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="angularTest">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Webenator</title>
+     <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+    <link rel="stylesheet" href="src/assets/css/miniature.css">
+    <link rel="stylesheet" href="src/assets/css/edit.css">
+    <link rel="stylesheet" href="src/assets/css/theme.css">
+  </head>
+  <body ng-controller="EditCtrl as edit" ng-class="{loading:loadingView}" class="defaultTheme">
+    <div class="app-wrap">
+
+      <!-- <div 
+        editable-context 
+        ng-data-model="home.title" 
+        element-type="text"
+        show-static-edit-link="false"
+        show-edit-on-hover="true"
+        >
+      </div> -->
+      
+      <!-- <h5 limit-character-render char-length="30" model-bind="sampleText">{{sampleText}}</h5> -->
+      <!-- <content-item ng-repeat="item in data.test" content="item"></content-item> -->
+      <!-- <input type="text" dl-enter-key="checkIfEnterKeyWasPressed()"; /> -->
+      <!-- <div flexible-section ng-method-binding="callHome();">my name is pritish</div> -->
+
+      <!-- <overlay-component ng-template="section1.tmpl.html"></overlay-component> -->
+      
+      <!-- <input type="file" name="fileToUpload" set-target="body" file-model="myFile"/> -->
+
+      <div ui-view class="content"></div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="src/vendor/angular-ui-router.min.js"></script>
+
+    <script src="src/app/router.js"></script>
+    <script src="src/app/common/common.js"></script>
+    <script src="src/app/common/models/home-model.js"></script>
+    <script src="src/app/common/models/edit-model.js"></script>
+    <script src="src/app/common/models/static-template-model.js"></script>
+    <script src="src/app/common/services/file-upload-service.js"></script>
+    <script src="src/app/home/home-controller.js"></script>
+    <script src="src/app/edit/edit-controller.js"></script>
+    <script src="src/app/directive/renderTemplate/renderTemplate-directive.js"></script>
+    <script src="src/app/directive/editableContent/editableContent-directive.js"></script>
+    <script src="src/app/directive/renderTemplateMiniature/renderTemplateMiniature-directive.js"></script>
+    <script src="src/app/directive/limitCharacterRender/limitCharacterRender-directive.js"></script>
+    <script src="src/app/directive/flexibleSection/flexibleSection-directive.js"></script>
+    <script src="src/app/directive/overlay/overlayComponent-directive.js"></script>
+    <script src="src/app/directive/accordionMenu/accordionMenu-directive.js"></script>
+    <script src="src/app/directive/uploadWidget/uploadWidget-directive.js"></script>
+    <script src="src/app/directive/bubbleInfo/bubbleInfo-directive.js"></script>
+  </body>
+</html>

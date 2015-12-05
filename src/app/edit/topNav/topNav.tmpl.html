@@ -24,16 +24,18 @@
 		</div>
 	</div>
 </div>
-<ul>
-	<li ng-repeat="listItem in data.menuList">
-		<a 
-			href="javascript:void(0);"
-			data="#{{listItem.content.menuRef}}" 
-			title="{{listItem.content.link.title}}" 
-			target="{{listItem.content.link.target}}">
-			{{listItem.menuId}}
-		</a>
-	</li>
-</ul>
-
+<div class="centerAlign topMenuWrapper">
+	<ul>
+		<li ng-repeat="listItem in data.menuList">
+			<a 
+				href="javascript:void(0);"
+				data="#{{listItem.content.menuRef}}" 
+				title="{{listItem.content.link.title}}" 
+				target="{{listItem.content.link.target}}">
+				{{listItem.menuId}}
+			</a>
+		</li>
+	</ul>
+</div>
+<a href="javascript:void(0);" class="userProfile"><i class="fa fa-user"></i> <span>{{data.users.name}}</span></a>
 

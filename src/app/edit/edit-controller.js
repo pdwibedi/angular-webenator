@@ -20,6 +20,7 @@ angular.module('angularTest')
     EditService.all()
     	.then(function(data) {
             $scope.data = data;
+            window.scopedData = $scope.data;
     	}).finally(function() {
             // Init Method Call
             $scope.templatesLoaded();
@@ -43,6 +44,7 @@ angular.module('angularTest')
            return;
          }
         });
+        $(".balloonFlyOut").hide();
         // Check for no-repeating sections in a page.
         (!checkPoint) ? $scope.data.menuList.push(copy) : '';
     };
@@ -53,11 +55,13 @@ angular.module('angularTest')
 
     $scope.setMenuScroll = function() {
         $(".topNav ul").delegate( "li", "click", function() {
-            var top = $($(this).find("a").attr("data")).position().top - 58;
-            $('html,body').animate({
-                    scrollTop: top
-            }, 1000);
-            event.preventDefault();
+            if($(this).find("a").attr("data")) {
+                var top = $($(this).find("a").attr("data")).position().top - 58;
+                $('html,body').animate({
+                        scrollTop: top
+                }, 1000);
+                event.preventDefault();    
+            }
         });
     };
 
