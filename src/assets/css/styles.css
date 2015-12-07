@@ -558,6 +558,9 @@ body.loading .modal {
     vertical-align: top;
     padding: 11px 15px;
     font-size: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0;
 }
 .editPage .editArea .userProfile span {
     font-size: 14px;
