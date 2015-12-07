@@ -10,9 +10,9 @@ angular.module('angularTest')
         	$(element).find("a").click(function() {
             var isVisible = $(this).siblings("div").css("display");
             if(isVisible == "none") {
-              $(this).siblings("div").css("display","block");
+              $(this).siblings("div").css("display","block").fadeIn();
             } else {
-              $(this).siblings("div").css("display","none");
+              $(this).siblings("div").fadeOut().css("display","none");
             }
           });
         },

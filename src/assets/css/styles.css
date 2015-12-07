@@ -151,7 +151,6 @@ body.loading .modal {
     position: relative;
 }
 .balloonFlyOut {
-    display: none;
     position: absolute;
     min-width: 240px;
     top: 88%;
@@ -163,8 +162,16 @@ body.loading .modal {
     box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     background-clip: padding-box;  
     padding-top: 8px;
-    -webkit-transition: all .5s; /* Safari */
-    transition: all .5s;
+    -webkit-transition: all 5s; /* Safari */
+    transition: all 5s;
+}
+.balloonFlyOut.fadeIn {
+    display: block;
+    opacity: 1
+}
+.balloonFlyOut.fadeOut {
+    display: none;
+    opacity: 0
 }
 .balloonFlyOut:before {
     content: " ";
@@ -226,9 +233,11 @@ body.loading .modal {
     border-radius: 5px;
     line-height: 24px;
     text-align: center;
-    position: relative;
-    left: 36%;
-    top: 46%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -14px;
     display: none;
     z-index: 2;
 }
@@ -244,9 +253,9 @@ body.loading .modal {
     display: block
 }
 .userUploadable img {
-    position: absolute;
+    /*position: absolute;
     left: 0;
-    top: 0;
+    top: 0;*/
 }
 
 
@@ -459,12 +468,16 @@ body.loading .modal {
     padding: 10px;
     overflow: auto;
     width: 238px;
+    overflow-x: hidden;
 }
 
 .templateList .wrap .scrollContainer {
-    overflow: scroll;
+    overflow-y: scroll;
     margin: 0;
     padding: 5px;   
+    width: 220px;
+    overflow-x: hidden;
+    margin-bottom: 0px;
 }
 .templateList h3 {
     margin: 0 0 20px;
@@ -790,7 +803,7 @@ body.loading .modal {
 .colContent .column .heroImg {
     height: 120px;
     margin: 6px;
-    border: solid 1px red;
+    border: solid 1px #e5e5e5;
 }
 .colContent .column .wrap {
 
@@ -826,7 +839,7 @@ body.loading .modal {
 }
 .rowContent .row .heroImg {
     height: 120px;
-    border: solid 1px red;
+    border: solid 1px #e5e5e5;
     float: right;
     width: 230px;
     position: relative;
@@ -847,7 +860,7 @@ body.loading .modal {
 .rowContent .row p, .rowContent .row p * {
     line-height: 18px;
     min-height: 70px;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -863,7 +876,8 @@ body.loading .modal {
     width: 150px;
     height: 150px;
     margin: 15px;
-    border: solid 1px red;
+    overflow: hidden;
+    border: solid 1px #e5e5e5;
 }
 .gallery .imageStack li:hover {
     opacity: 0.5;

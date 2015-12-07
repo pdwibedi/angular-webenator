@@ -23,15 +23,14 @@ angular.module('angularTest')
             window.scopedData = $scope.data;
     	}).finally(function() {
             // Init Method Call
-            $scope.templatesLoaded();
+            $scope.templatesLoaded();   
         });
 
     $scope.showTemplateFlyOut = function() {
-        var isVisible = $($scope.default.balloonFlyOut).css("display");
-        if(isVisible == "none") {
-            $($scope.default.balloonFlyOut).css("display", "block");
+        if($($scope.default.balloonFlyOut).hasClass("fadeOut")) {
+            $($scope.default.balloonFlyOut).addClass("fadeIn").removeClass("fadeOut");
         } else {
-            $($scope.default.balloonFlyOut).css("display", "none");
+            $($scope.default.balloonFlyOut).removeClass("fadeIn").addClass("fadeOut");
         }
     };
 

@@ -5,17 +5,21 @@ angular.module('angularTest')
         restrict: 'A',
         scope: {
           setTarget: '@',
+          restrictHeight: '@',
           createImgElem: '@'
         },
         link: function(scope, element, attrs) {
             var model = $parse(attrs.fileModel),
                 modelSetter = model.assign,
-                filePath;
-            // createImgElem = (Boolean(scope.createImgElem)) ? Boolean(scope.createImgElem) : false;
-            // setTarget = (scope.setTarget) ? scope.setTarget : $(element).parent();
+                filePath,
+                restrictHeight;
 
+            restrictHeight = (attrs.restrictHeight == "false" || attrs.restrictHeight === undefined) ? false : true;
+            createImgElem = (JSON.parse(scope.createImgElem)) ? true : false;
+            // setTarget = (scope.setTarget) ? scope.setTarget : $(element).parent();
+            
             element.on('change', function(){
-                show_image_preview(element, scope.setTarget, JSON.parse(scope.createImgElem));
+                show_image_preview(element, scope.setTarget, createImgElem, restrictHeight);
                 scope.$apply(function(){
                   filePath = USER_UPLOADS + element[0].files[0].lastModified + element[0].files[0].name;
                   modelSetter(scope, filePath);
@@ -24,7 +28,7 @@ angular.module('angularTest')
         },
         controller: function($scope, $element) {
           
-          show_image_preview = function(file_selector, target, createImgElem) {
+          show_image_preview = function(file_selector, target, createImgElem, fixedHeight) {
             var files = file_selector[0].files,
             imageContainer = $(target),
             imagePreview = $('<div class="imageReplace"><input type="button" value="Clear BG" title="Remove Image" class="removeImageButton" onclick="remove_selected_image(this)" /></div>');
@@ -33,14 +37,18 @@ angular.module('angularTest')
               var file = files[i];
 
               var img = document.createElement("img");
-              $(img).css({"width": $(imageContainer).width(), "height": $(imageContainer).height()});
+              if(fixedHeight) {
+                $(img).attr("height",$(imageContainer).height()); 
+              } else {
+                $(img).css({"width": $(imageContainer).width(), "height": $(imageContainer).height()});
+              }
 
               var reader = new FileReader();
               reader.onload = (function(imageContainer, createImgElem) { 
                 return function(e) { 
                   if(createImgElem) {
                     img.src = e.target.result;
-                    $(imageContainer).append(img);  
+                    $(imageContainer).append(img);
                   } else {
                     $(imageContainer).append(imagePreview);
                     imageContainer.css({

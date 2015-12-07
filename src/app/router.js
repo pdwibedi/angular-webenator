@@ -3,6 +3,7 @@
 angular.module('angularTest', [
   'ui.router'
 ])
+  .constant('LOGIN_URI', 'https://intense-torch-8839.firebaseio.com/')
   .constant('ENDPOINT_URI', './src/')
   .constant('DIRECTIVE_URI', './src/app/directive/')
   .constant('SITE_SECTION_URI', './src/app/edit/')
@@ -11,6 +12,12 @@ angular.module('angularTest', [
     $urlRouterProvider.otherwise('/edit');
 
     $stateProvider
+      .state('login', {
+        url:'/login',
+        templateUrl: 'src/app/login/login.tmpl.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+      })
       .state('home', {
         url:'/home',
         views: {
