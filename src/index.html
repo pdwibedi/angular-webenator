@@ -7,10 +7,7 @@
      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/miniature.css">
-    <link rel="stylesheet" href="assets/css/edit.css">
-    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="build/css/edit-feature.css">
   </head>
   <body ng-controller="EditCtrl as edit" ng-class="{loading:loadingView}" class="defaultTheme">
     <div class="app-wrap">
@@ -36,30 +33,12 @@
       <div ui-view class="content"></div>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="//cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
-    <script src="//cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="vendor/angular-ui-router.min.js"></script>
 
-    <script src="app/router.js"></script>
-    <script src="app/common/common.js"></script>
-    <script src="app/common/models/home-model.js"></script>
-    <script src="app/common/models/edit-model.js"></script>
-    <script src="app/common/models/static-template-model.js"></script>
-    <script src="app/common/services/file-upload-service.js"></script>
-    <script src="app/common/services/auth-service.js"></script>
-    <script src="app/home/home-controller.js"></script>
-    <script src="app/edit/edit-controller.js"></script>
-    <script src="app/directive/renderTemplate/renderTemplate-directive.js"></script>
-    <script src="app/directive/editableContent/editableContent-directive.js"></script>
-    <script src="app/directive/renderTemplateMiniature/renderTemplateMiniature-directive.js"></script>
-    <script src="app/directive/limitCharacterRender/limitCharacterRender-directive.js"></script>
-    <script src="app/directive/flexibleSection/flexibleSection-directive.js"></script>
-    <script src="app/directive/overlay/overlayComponent-directive.js"></script>
-    <script src="app/directive/accordionMenu/accordionMenu-directive.js"></script>
-    <script src="app/directive/uploadWidget/uploadWidget-directive.js"></script>
+    <script src="build/js/edit-feature.js"></script>
 
   </body>
 </html>

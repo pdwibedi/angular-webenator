@@ -1,13 +1,12 @@
-'use strict';
 
 angular.module('angularTest', [
   'ui.router'
 ])
   .constant('LOGIN_URI', 'https://intense-torch-8839.firebaseio.com/')
-  .constant('ENDPOINT_URI', './src/')
-  .constant('DIRECTIVE_URI', './src/app/directive/')
-  .constant('SITE_SECTION_URI', './src/app/edit/')
-  .constant('USER_UPLOADS', './src/assets/userUploads/')
+  .constant('ENDPOINT_URI', './')
+  .constant('DIRECTIVE_URI', '/src/app/directive/')
+  .constant('SITE_SECTION_URI', '/src/app/edit/')
+  .constant('USER_UPLOADS', '/src/assets/userUploads/')
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/edit');
 
@@ -36,18 +35,18 @@ angular.module('angularTest', [
         url:'/edit',
         views: {
           '': { 
-            templateUrl: 'src/app/edit/edit.tmpl.html',
+            templateUrl: '/src/app/edit/edit.tmpl.html',
             controller: 'EditCtrl',
             controllerAs: 'edit'
           },
           'sideNav@edit': { 
-            templateUrl: 'src/app/edit/sideNav/sideNav.tmpl.html'
+            templateUrl: '/src/app/edit/sideNav/sideNav.tmpl.html'
           },
           'topNav@edit': { 
-            templateUrl: 'src/app/edit/topNav/topNav.tmpl.html'
+            templateUrl: '/src/app/edit/topNav/topNav.tmpl.html'
           },
           'siteContent@edit': {
-            templateUrl: 'src/app/edit/siteContent/siteContent.tmpl.html'
+            templateUrl: '/src/app/edit/siteContent/siteContent.tmpl.html'
           }
         }
       })
