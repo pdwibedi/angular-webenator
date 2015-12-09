@@ -5,7 +5,7 @@
 .defaultTheme .topNav {
 	border-bottom: solid 1px #dcddce;
 }
-.defaultTheme .topNav li a:hover {
+.defaultTheme .topNav li a:hover, .defaultTheme .topNav li.active a {
 	background-color: #eeeedc;
 }
 .defaultTheme .topNav li a {
@@ -39,7 +39,7 @@
 .blueTheme .topNav {
 	border-bottom: solid 1px #bee0f0;
 }
-.blueTheme .topNav li a:hover {
+.blueTheme .topNav li a:hover, .blueTheme .topNav li.active a  {
 	background-color: #e8f4f9;
 }
 .blueTheme .topNav li a {
@@ -73,7 +73,7 @@
 .pinkTheme .topNav {
 	border-bottom: solid 1px #f4c2e4;
 }
-.pinkTheme .topNav li a:hover {
+.pinkTheme .topNav li a:hover, .pinkTheme .topNav li.active a  {
 	background-color: #fcedf7;
 }
 .pinkTheme .topNav li a {
@@ -107,7 +107,7 @@
 .yellowTheme .topNav {
 	border-bottom: solid 1px #d1d08e;
 }
-.yellowTheme .topNav li a:hover {
+.yellowTheme .topNav li a:hover, .yellowTheme .topNav li.active a  {
 	background-color: #f4f3a7;
 }
 .yellowTheme .topNav li a {
@@ -141,7 +141,7 @@
 .charcoalTheme .topNav {
 	border-bottom: solid 1px #b5b5b5;
 }
-.charcoalTheme .topNav li a:hover {
+.charcoalTheme .topNav li a:hover, .charcoalTheme .topNav li.active a  {
 	background-color: #e5e5e5;
 }
 .charcoalTheme .topNav li a {
@@ -175,7 +175,7 @@
 .purpleTheme .topNav {
 	border-bottom: solid 1px #c9c7e8;
 }
-.purpleTheme .topNav li a:hover {
+.purpleTheme .topNav li a:hover, .purpleTheme .topNav li.active a  {
 	background-color: #ecebf7;
 }
 .purpleTheme .topNav li a {

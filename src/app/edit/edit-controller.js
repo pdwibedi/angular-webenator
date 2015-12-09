@@ -43,7 +43,7 @@ angular.module('angularTest')
            return;
          }
         });
-        $(".balloonFlyOut").hide();
+        $(".balloonFlyOut").removeClass("fadeIn").addClass("fadeOut");
         // Check for no-repeating sections in a page.
         (!checkPoint) ? $scope.data.menuList.push(copy) : '';
     };
