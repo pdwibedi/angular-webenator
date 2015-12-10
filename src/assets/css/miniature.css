@@ -204,3 +204,12 @@
 .miniature .gallery li {
     float: left
 }
+
+.miniature .map {
+    /*transform: scale(1, 1) !important;
+    -ms-transform: scale(1, 1) !important;
+    -webkit-transform: scale(1, 1) !important;*/
+}
+.miniature .map .gm-style .gmnoprint , .miniature .map .gm-style .gmnoprint, .miniature .map .gm-style > div:last-child {
+    /*display: none;*/
+}

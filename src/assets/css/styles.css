@@ -203,11 +203,18 @@ body.loading .modal {
 }
 .bubbleInfo > div {
     display:  none;
-    height: 200px;
+    min-height: 50px;
     border-radius: 2px;
+    padding: 10px 7px;
     border-top: solid 1px #40444A;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+    color: #fff;
+}
+.bubbleInfo > div .btn {
+    background: #fff;
+    color: #000;
+    padding: 2px 10px;
 }
 
 .userUploadable {
@@ -472,11 +479,9 @@ body.loading .modal {
 }
 
 .templateList .wrap .scrollContainer {
-    overflow-y: scroll;
     margin: 0;
     padding: 5px;   
     width: 220px;
-    overflow-x: hidden;
     margin-bottom: 0px;
 }
 .templateList h3 {
@@ -883,4 +888,11 @@ body.loading .modal {
     opacity: 0.5;
     cursor: pointer;
     background-color: #dedede;
+}
+
+/* Google Map Integration */
+.editPage .editArea .siteContent section .map {
+    width: 100%;
+    height: 400px;
+    margin: -50px 0px;
 }

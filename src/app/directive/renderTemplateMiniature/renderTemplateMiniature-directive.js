@@ -10,6 +10,7 @@ angular.module('angularTest')
     var template8 = '<div class="{{menuItem.content.class}}"><h2>{{menuItem.content.header}}</h2><p class="subTitle">{{menuItem.content.subtitle}}</p><div class="column"><div ng-repeat="item in menuItem.content.columns"><div class="heroImg"></div><div class="wrap"><h3>{{item.title}}</h3><span class="tagline" limit-character-render char-length="6" model-bind="item.tagline">{{item.tagline}}</span><p limit-character-render char-length="40" model-bind="item.description">{{item.description}}</p></div></div></div></div>';
     var template9 = '<div class="{{menuItem.content.class}}"><h2>{{menuItem.content.header}}</h2><p class="subTitle">{{menuItem.content.subtitle}}</p><div class="row"><div ng-repeat="item in menuItem.content.rows"><div class="heroImg"></div><div class="wrap"><h3>{{item.title}}</h3><span class="tagline" limit-character-render char-length="6" model-bind="item.tagline">{{item.tagline}}</span><p limit-character-render char-length="40" model-bind="item.description">{{item.description}}</p></div></div></div></div>';
     var template10 = '<div class="{{menuItem.content.class}}"><h2>{{menuItem.content.header}}</h2><p class="subTitle">{{menuItem.content.subtitle}}</p><ul class="imageStack"><li ng-repeat="item in menuItem.content.gallery"></li></ul></div>';
+    var template11 = '<div class="{{menuItem.content.class}}" data-position="{{menuItem.content.position.lat}}" id="googleMap" style="height:100px;"></div>';
 
     var getTemplate = function(contentType, scope) {
         var template = '';
@@ -25,6 +26,7 @@ angular.module('angularTest')
             case 'Item8': template = template8; break;
             case 'Item9': template = template9; break;
             case 'Item10': template = template10; break;
+            case 'Item11': template = template11; break;
         }
 
         
@@ -40,6 +42,12 @@ angular.module('angularTest')
         }, function() {
             $(this).removeClass("hover");
         });
+
+        var isMapExists = document.getElementById("googleMap");
+        if(isMapExists && isMapExists.innerHTML == "") {
+            var myLatLng = {lat: parseInt(scope.menuItem.content.position.lat), lng: parseInt(scope.menuItem.content.position.lng)};
+            scope.initializeMap(document.getElementById("googleMap"), myLatLng);
+        }
     }
 
     return {

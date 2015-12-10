@@ -10,6 +10,7 @@ angular.module('angularTest')
     };
     $scope.newArticle = {};
     $scope.newBlog = {};
+    $scope.locationMap = {};
 
     // Get all the default menu items from template.json
     staticTemplateService.all().then(function(data) { $scope.menuStack = data; });
@@ -23,8 +24,12 @@ angular.module('angularTest')
             window.scopedData = $scope.data;
     	}).finally(function() {
             // Init Method Call
-            $scope.templatesLoaded();   
+            $scope.onDataLoaded();   
         });
+
+    $scope.onDataLoaded = function() {
+        $scope.setMenuScroll();
+    };
 
     $scope.showTemplateFlyOut = function() {
         if($($scope.default.balloonFlyOut).hasClass("fadeOut")) {
@@ -53,6 +58,7 @@ angular.module('angularTest')
     };
 
     $scope.setMenuScroll = function() {
+
         $(".topNav ul").delegate( "li", "click", function() {
             if($(this).find("a").attr("data")) {
                 var top = $($(this).find("a").attr("data")).position().top - 58;
@@ -62,10 +68,6 @@ angular.module('angularTest')
                 event.preventDefault();    
             }
         });
-    };
-
-    $scope.templatesLoaded = function() {
-        $scope.setMenuScroll();
     };
 
     $scope.deleteRecordHandler = function(array, index){
@@ -105,6 +107,30 @@ angular.module('angularTest')
         //$scope.$apply();
         $scope.newBlog = {};
     };
+
+    $scope.updateLocation = function(isValid, form) {
+        var geocoder = new google.maps.Geocoder(),
+            jsonindex = $("form[name='"+form+"']").find("input[name='JSONIndex']").val();
+        if($scope.locationMap && isValid) {
+            var blogIndexInJSON = getJSONIndex(jsonindex),
+                address = $scope.locationMap.address;
+            geocoder.geocode({'address': address}, function(results, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    var updatedPosition = results[0].geometry.location;
+                    $scope.data.menuList[blogIndexInJSON].content.position.lat = updatedPosition.lat;
+                    $scope.data.menuList[blogIndexInJSON].content.position.lng = updatedPosition.lng;
+                    $scope.initializeMap(document.getElementById('googleMapContact'), updatedPosition);
+                } else {
+                    alert('Address entered was not valid for the following reason: ' + status);
+                }
+            });
+            $scope.closeOverlay('section11');
+        }
+        
+        // Clearing the temp Obj
+        $scope.locationMap = {};
+    };
+
 
     var getJSONIndex = function(sectionRef) {
         var currentJSONList = $scope.data.menuList;
@@ -161,6 +187,47 @@ angular.module('angularTest')
         }
     };
 
+    $scope.initializeMap = function(elem, myLatLng) {
+        // Create a map object and specify the DOM element for display.
+        setTimeout(function() {
+            // Specify features and elements to define styles.
+            var styleArray = [{
+              featureType: "all",
+              stylers: [
+               { saturation: 20 }
+              ]
+            },{
+              featureType: "road.arterial",
+              elementType: "geometry",
+              stylers: [
+                { hue: "#0061FF" },
+                { saturation: 70 }
+              ]
+            },{
+              featureType: "poi.business",
+              elementType: "labels",
+              stylers: [
+                { visibility: "off" }
+              ]
+            }];
+
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(elem, {
+                center: myLatLng,
+                scrollwheel: false,
+                // Apply the map style array to the map.
+                styles: styleArray,
+                zoom: 18
+            });
+            // Create a marker and set its position.
+            var marker = new google.maps.Marker({
+                map: map,
+                position: myLatLng,
+                title: 'Hello World!'
+            });
+        }, 100);
+    };
+
     // JQUERY DOM EVENT BINDINGS 
     (function($) {
 
@@ -193,9 +260,8 @@ angular.module('angularTest')
             $scope.$apply();
         });
 
+
     })($);
-
-
 
   })
 ;

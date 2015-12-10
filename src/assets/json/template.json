@@ -425,6 +425,23 @@
 					}
 				]
 			}
+		},
+		{
+			"id": 11,
+			"menuId": "Item11",
+			"menuContentId": "section11",
+			"className": "",
+			"content": {
+				"menuRef": "section11",
+				"template": "section11.tmpl.html",
+				"class": "map",
+				"header": "Item11",
+				"subtitle": "Google Map Integration",
+				"position": {
+					"lat": "-25.363",
+					"lng": "131.044"
+				}
+			}
 		}
 	]
 }
