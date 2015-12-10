@@ -6,7 +6,7 @@ This Webenator project is a seed for AngularJS applications. The project contain
 This sample application is intended to be useful as both a learning tool and a skeleton application for a typical AngularJS web app: comprised of a Side navigation area and a content area. You can use it to quickly bootstrap your AngularJS webapp projects and dev environment for these projects. 
 
 ## Getting Started
----
+
 ### Prerequisites
 You will need git to clone the angular-webenator repository. You can get git from http://git-scm.com/.
 
@@ -21,7 +21,7 @@ Clone the material-start repository using git:
     cd angular-webenator
 
 ## Install Dependencies
----
+
 We have two kinds of dependencies in this project: tools and AngularJS framework code. The tools help us manage and test the application.
 
 We get the tools we depend upon via npm, the node package manager.
@@ -47,7 +47,7 @@ This will do the following things:
 > 'http://localhost:8080'
 
 ## Directory Layout
----
+
 
     src/                    --> Source folder
       app/                  --> all app specific modules
@@ -67,7 +67,7 @@ This will do the following things:
     README.md
 
 ## RoadMap
----
+
 
 * Login user authentication to app.
 * Addition of a new template for *"Carousel"*.
