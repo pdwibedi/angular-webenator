@@ -1,0 +1,16 @@
+<div class="overlayWrapper">
+	<a href="#" class="btn closeOverlay" ng-click="closeOverlay('section11')"><i class="fa fa-times"></i></a>
+	<h2>Update Location </h2>
+	<form name="updateLocationUserForm" ng-submit="updateLocation(updateLocationUserForm.$valid, 'updateLocationUserForm')">
+		<article class="overlay-article">
+
+			<label>Address</label> 
+			<input type="text" name="author" value="" placeholder="Your Address ...." ng-model="locationMap.address" />
+			<input type="hidden" name="JSONIndex" id="" value="{{section.menuId}}" />
+			
+		</article>
+
+		<input type="submit" class="btn" value="Save" />
+	</form>
+</div>
+<script>
