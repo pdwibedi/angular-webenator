@@ -2,7 +2,7 @@ angular.module('angularTest')
   .directive('editableContext', function($http, DIRECTIVE_URI){
   	var ctrl = this,
     showEditOnHover,
-    deleteBtn = "button.deleteRowBtn";
+    deleteBtn = "button.deleteBtn";
 
   	linker = function(scope, element, attrs) {
       var that = scope;
@@ -17,7 +17,8 @@ angular.module('angularTest')
       // Removes Editing visual on blur
       $(element).find("input, textarea").blur({currentScope: scope}, function(e) {
         $(this).parents("editable-context").removeClass("editor");
-        e.data.currentScope.isReplyFormOpen = false;
+        e.data.currentScope.isReplyFormOpen = !e.data.currentScope.isReplyFormOpen;
+        e.data.currentScope.$apply();
       });
 
       function showhideDeleteBtn(el) {
