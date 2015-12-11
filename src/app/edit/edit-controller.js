@@ -117,8 +117,8 @@ angular.module('angularTest')
             geocoder.geocode({'address': address}, function(results, status) {
                 if (status === google.maps.GeocoderStatus.OK) {
                     var updatedPosition = results[0].geometry.location;
-                    $scope.data.menuList[blogIndexInJSON].content.position.lat = updatedPosition.lat;
-                    $scope.data.menuList[blogIndexInJSON].content.position.lng = updatedPosition.lng;
+                    $scope.data.menuList[blogIndexInJSON].content.position.lat = updatedPosition.lat();
+                    $scope.data.menuList[blogIndexInJSON].content.position.lng = updatedPosition.lng();
                     $scope.initializeMap(document.getElementById('googleMapContact'), updatedPosition);
                 } else {
                     alert('Address entered was not valid for the following reason: ' + status);
