@@ -110,6 +110,7 @@
 					      	{
 						        "index" : 1,
 						        "elemType": "input",
+						        "label": "Name",
 						        "attributes" : {
 						          	"name":"name",
 									"type":"text",
@@ -120,6 +121,7 @@
 						    {
 						        "index" : 2,
 						        "elemType": "input",
+						        "label": "Phone",
 						        "attributes" : {
 						          	"name":"phone",
 									"type":"text",
@@ -130,6 +132,7 @@
 						    {
 						        "index" : 3,
 						        "elemType": "input",
+						        "label": "Email",
 						        "attributes" : {
 						          	"name":"email",
 									"type":"text",
