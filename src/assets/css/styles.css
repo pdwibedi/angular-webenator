@@ -104,9 +104,6 @@ body.loading .modal {
     color: #000;
 }
 .backgroundChooser {
-    position: absolute; 
-    right: 10px;
-    top: 10px;
     display: inline-block;
     width: 80px;
 }
@@ -140,6 +137,7 @@ body.loading .modal {
     background-color: black;
     color: #fff;
     border: 0;
+    z-index: 3;
     padding: 3px 5px;
     border-radius: 0;
     border-bottom-left-radius: 5px;
@@ -461,7 +459,7 @@ body.loading .modal {
     width: 100%
 }
 .editPage .sideBar .sideNav .dynamicModelText{
-    line-height: 25px
+    line-height: 28px
 }
 .editPage .sideBar .sideNav .buttonLink {
     font-size: 10px;
@@ -712,6 +710,14 @@ body.loading .modal {
     margin: 30px 70px 0;
     padding: 20px;
 }
+.contact .form label {
+    display: block;
+    text-align: left;
+    width: 407px;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-size: 12px;
+}
 .contact .form input {
     display: inline-block;
     line-height: 34px;
@@ -804,6 +810,7 @@ body.loading .modal {
     width: 30%;
     float: left;
     margin: 12px;
+    border: solid 1px transparent;
 }
 .colContent .column .heroImg {
     height: 120px;
@@ -841,6 +848,7 @@ body.loading .modal {
     position: relative;
     text-align: left;
     margin: 30px 0;
+    border: solid 1px transparent;
 }
 .rowContent .row .heroImg {
     height: 120px;
