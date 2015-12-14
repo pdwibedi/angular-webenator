@@ -445,6 +445,48 @@
 					"lng": "131.044"
 				}
 			}
+		},
+		{
+			"id": 12,
+			"menuId": "Item12",
+			"menuContentId": "section12",
+			"className": "",
+			"content": {
+				"menuRef": "section12",
+				"template": "section12.tmpl.html",
+				"class": "carousel fullBleed",
+				"header": "Item12",
+				"subtitle": "",
+				"slides": [
+					{
+						"header": "Sample Heading",
+						"description": "Sample text description",
+						"image": {
+							"src": "",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"header": "Sample Heading 2",
+						"description": "Sample text description 2",
+						"image": {
+							"src": "",
+							"alt": "hero",
+							"title": ""
+						}
+					},
+					{
+						"header": "Sample Heading 3",
+						"description": "Sample text description 3",
+						"image": {
+							"src": "",
+							"alt": "hero",
+							"title": ""
+						}
+					}
+				]
+			}
 		}
 	]
 }

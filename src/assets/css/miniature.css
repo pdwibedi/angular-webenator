@@ -213,3 +213,47 @@
 .miniature .map .gm-style .gmnoprint , .miniature .map .gm-style .gmnoprint, .miniature .map .gm-style > div:last-child {
     /*display: none;*/
 }
+
+.miniature .miniCarousel .carouselContainer{
+    width: 198px;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+.miniature .miniCarousel .carouselContainer li {
+    display: inline-block;
+    width: 197px;
+    height: 123px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.miniature .miniCarousel .carouselContainer h2 {
+    text-align: left;
+    margin: 28px 0 0 32px;
+}
+.miniature .miniCarousel .carouselContainer p {
+    text-align: left;
+    margin: 0 0 0 32px;
+}
+.miniature .miniCarousel .prev, .miniCarousel .next {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -14px;
+    background: none;
+    border: 0;
+    overflow: hidden;
+    width: 16px;
+    height: 30px;
+    font-size: 22px !important;
+}
+.miniature .miniCarousel .prev:hover, .miniCarousel .next:hover {
+    color: #535353;
+}
+.miniature .miniCarousel .next {
+    left: auto;
+    right: 10px;
+}

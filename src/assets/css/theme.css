@@ -30,6 +30,9 @@
 	background-color: #eeeedc;
 	border: solid 1px #dcddce;
 }
+.defaultTheme .carousel { 
+	background-color: #dcddce;
+}
 
 
 /* Blue */
@@ -63,6 +66,9 @@
 .blueTheme input[type='submit'], .blueTheme button {
 	background-color: #e8f4f9;
 	border: solid 1px #bee0f0;
+}
+.blueTheme .carousel { 
+	background-color: #bee0f0;
 }
 
 
@@ -98,6 +104,9 @@
 	background-color: #fcedf7;
 	border: solid 1px #f4c2e4;
 }
+.pinkTheme .carousel { 
+	background-color: #f4c2e4;
+}
 
 
 /* Yellow */
@@ -131,6 +140,9 @@
 .yellowTheme input[type='submit'], .yellowTheme button {
 	background-color: #f4f3a7;
 	border: solid 1px #d1d08e;
+}
+.yellowTheme .carousel { 
+	background-color: #d1d08e;
 }
 
 
@@ -166,6 +178,9 @@
 	background-color: #e5e5e5;
 	border: solid 1px #b5b5b5;
 }
+.charcoalTheme .carousel { 
+	background-color: #b5b5b5;
+}
 
 
 /* Purple */
@@ -199,4 +214,7 @@
 .purpleTheme input[type='submit'], .purpleTheme button {
 	background-color: #ecebf7;
 	border: solid 1px #c9c7e8;
+}
+.purpleTheme .carousel { 
+	background-color: #c9c7e8;
 }
