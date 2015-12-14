@@ -65,6 +65,7 @@ gulp.task('clean', function() {
 //Watch
 gulp.task("watch", function(){
     gulp.watch("./src/**/*.js", ["js"]);
+    gulp.watch("./src/**/*.js", ["jsMove"]);
     // gulp.watch("./src/**/*.html", ["html"]);
     gulp.watch("./src/**/*.css", ["css"]);
 });
@@ -75,7 +76,7 @@ gulp.task('connect', function() {
 });
 
 // Default task
-gulp.task('default', ['clean', 'html', 'js', 'jsMove', 'css', 'connect', 'watch'], function() {
+gulp.task('default', ['clean', /* 'html',*/ 'js', 'jsMove', 'css', 'connect', 'watch'], function() {
 // gulp.task('default', ['js', 'connect', 'watch'], function() {
 // gulp.task('default', ['connect'], function() {
     console.log("Done");
