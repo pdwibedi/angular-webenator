@@ -1,4 +1,4 @@
-var carousel = function(el) {
+carousel = function(el) {
       var elem = $(el).find(".carouselContainer"),
         child = elem.children(),
         containerWidth = elem.css("width"),
