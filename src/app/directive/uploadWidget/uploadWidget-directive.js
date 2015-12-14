@@ -27,6 +27,7 @@ angular.module('angularTest')
             });
         },
         controller: function($scope, $element) {
+          var targetReplacer = $element.parent();
           
           show_image_preview = function(file_selector, target, createImgElem, fixedHeight) {
             var files = file_selector[0].files,
@@ -50,7 +51,7 @@ angular.module('angularTest')
                     img.src = e.target.result;
                     $(imageContainer).append(img);
                   } else {
-                    $(imageContainer).append(imagePreview);
+                    $(targetReplacer).append(imagePreview);
                     imageContainer.css({
                       'background-image': 'url(' + e.target.result + ')',
                       'background-repeat': 'no-repeat',

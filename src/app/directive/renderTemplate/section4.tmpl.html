@@ -1,11 +1,25 @@
-<div class="{{dataobj.content.class}}">
-	<h2>{{dataobj.content.header}}</h2>
-	<p class="subTitle">{{dataobj.content.subtitle}}</p>
-	<div class="form">
-		<form action="{{dataobj.content.formElements.action}}" method="{{dataobj.content.formElements.method}}">
-			<div ng-repeat="field in dataobj.content.formElements.fields.items">
-				<input type="{{field.attributes.type}}" name="{{field.attributes.name}}" value="{{field.attributes.value}}" placeholder="{{field.attributes.placeholder}}" />
-			</div>
-		</form>
-	</div>
+<div class="overlayWrapper">
+	<a href="#" class="btn closeOverlay" ng-click="closeOverlay('section4')"><i class="fa fa-times"></i></a>
+	<h2>Contact Form Update </h2>
+	<form class="saveContactUserForm" name="saveContactUserForm" ng-submit="saveContactForm(saveContactUserForm.$valid, 'saveContactUserForm')">
+		<article class="overlay-article">
+			<aside class="column">
+
+				<div ng-repeat="listItem in contactForm.items">
+					<input type="checkbox" name="{{listItem.label}}" ng-model="listItem.isVisible">
+					<label editable-context ng-data-model="listItem.label" element-type="text">{{listItem.label}}</label>
+					<input type="text" name="" placeholder="{{listItem.attributes.placeholder}}" ng-model="listItem.attributes.placeholder" />
+				</div>
+				<input type="hidden" name="JSONIndex" id="" value="{{section.menuId}}" />
+			</aside>
+			<aside class="configuration">
+				<div ng-repeat="listItem in contactForm.configuration">
+					<label editable-context ng-data-model="listItem.label" element-type="text">{{listItem.label}}</label> 
+					<input type="text" name="" placeholder="{{listItem.attributes.placeholder}}" />
+				</div>
+			</aside>
+		</article>
+
+		<input type="submit" class="btn" value="Save" />
+	</form>
 </div>

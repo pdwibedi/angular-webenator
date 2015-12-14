@@ -21,7 +21,9 @@ angular.module('angularTest')
     EditService.all()
     	.then(function(data) {
             $scope.data = data;
-            window.scopedData = $scope.data;
+            window.scopedData = $scope;
+
+            $scope.contactForm = data.menuList[getJSONIndex("Item4")].content.formElements.fields;
     	}).finally(function() {
             // Init Method Call
             $scope.onDataLoaded();   
@@ -106,6 +108,13 @@ angular.module('angularTest')
 
         //$scope.$apply();
         $scope.newBlog = {};
+    };
+
+    $scope.saveContactForm = function(isValid, form) {
+        var jsonindex = $("form[name='"+form+"']").find("input[name='JSONIndex']").val(),
+            blogIndexInJSON = getJSONIndex(jsonindex),
+            existingItems = $scope.data.menuList[blogIndexInJSON].content.formElements.fields.items;
+        $scope.closeOverlay('section4');
     };
 
     $scope.updateLocation = function(isValid, form) {

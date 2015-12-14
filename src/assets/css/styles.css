@@ -64,7 +64,15 @@ body.loading .modal {
 
 
 /* Common styles STARTS  */
-
+.containerScreen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
 .contentBox {
     display: block;
 }
@@ -109,8 +117,8 @@ body.loading .modal {
 }
 
 .imageReplace {
-    position: absolute !important;
-    width: auto !important;
+    position: absolute;
+    width: auto;
     right: 10px;
     top: 10px;
 
@@ -120,6 +128,73 @@ body.loading .modal {
 }
 .centerAlign {
     text-align: center;
+}
+
+.carousel .carouselContainer{
+    width: 100%;
+    height: 334px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 
+}
+.carousel .carouselContainer li {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.carousel .prev, .carousel .next {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -12px;
+    background: none;
+    border: 0;
+    overflow: hidden;
+    width: 24px;
+    height: 30px;
+    font-size: 32px;
+}
+.carousel .carouselContainer .wrapper {
+    width: 736px;
+    margin: 24px auto;
+    overflow: hidden;
+    height: 284px;
+}
+.carousel .carouselContainer .wrapper > div {
+    float: left;
+    width: 440px;
+    margin-right: 45px;
+}
+.carousel .carouselContainer .wrapper .img {
+    width: 200px;
+    height: 200px;
+    border: solid 2px;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(45deg);
+    margin-top: 42px;
+}
+.carousel .carouselContainer h2 {
+    margin: 40px 0 0 0px;
+    text-align: left !important
+}
+.carousel .carouselContainer p {
+    margin: 2px 0 0 0px;
+}
+.carousel .carouselContainer p, .carousel .carouselContainer p *, .carousel .carouselContainer h2 * {
+    text-align: left !important;
+}
+.carousel .carouselContainer p textarea {
+    line-height: 36px !important;
+}
+.carousel .prev:hover, .carousel .next:hover {
+    color: #535353;
+}
+.carousel .next {
+    left: auto;
+    right: 10px;
 }
 
 .flexible-section {
@@ -201,19 +276,56 @@ body.loading .modal {
 }
 .bubbleInfo > div {
     display:  none;
-    min-height: 50px;
     border-radius: 2px;
-    padding: 10px 7px;
+    padding: 0 7px;
     border-top: solid 1px #40444A;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     box-shadow: 0 6px 12px rgba(0,0,0,0.175);
     color: #fff;
+}
+.bubbleInfo .wrapper {
+    padding: 10px 0
 }
 .bubbleInfo > div .btn {
     background: #fff;
     color: #000;
     padding: 2px 10px;
 }
+.bubbleInfo .text-color {
+    overflow: hidden;
+    height: 24px;
+}
+.bubbleInfo .text-color li {
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+.bubbleInfo .text-color li a {
+    display: block;
+    padding: 5px 0;
+    margin: 0 2px;
+    background-color: #747374;
+    vertical-align: top;  
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+}
+.bubbleInfo .imageReplace {
+    position: static;
+    width: 76px;
+    color: #000;
+    font-size: 12px
+} 
+.text-overlay {
+    color: #fff;
+}
+.light-text {
+    color: #fff;
+}
+.dark-text {
+    color: #000;
+}
+
 
 .userUploadable {
     position: relative;
@@ -626,6 +738,10 @@ body.loading .modal {
     margin: 0 auto;
     position: relative;
 }
+.editPage .editArea .siteContent section .fullBleed {
+    width: 100%;
+    margin: -50px 0 -60px;
+}
 .editPage .editArea .siteContent section h2, .editPage .editArea .siteContent section h2 * {
     font-size: 32px;
     font-weight: normal;
@@ -709,6 +825,10 @@ body.loading .modal {
 .contact .form {
     margin: 30px 70px 0;
     padding: 20px;
+    position: relative;
+}
+.contact .form:hover .fileUploadScreen, .contact .form:hover .editForm {
+    display: block;
 }
 .contact .form label {
     display: block;
@@ -727,10 +847,77 @@ body.loading .modal {
     border-radius: 7px;
     color: #d3d3d3;
 }
+.contact .form .fileUploadScreen {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+.contact .form .editForm {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -15px;
+    background-color: #fff;
+}
 .contact .form input[type="submit"] {
     width: auto;
     color: #000;
 } 
+.saveContactUserForm {
+    font-size: 12px;
+    text-align: center;
+}
+.saveContactUserForm article {
+    overflow: hidden;
+}
+.saveContactUserForm aside {
+    float: left;  
+    width: 45%;
+    margin: 10px 2%;
+}
+.saveContactUserForm aside.configuration {
+
+}
+.saveContactUserForm aside.configuration label, .saveContactUserForm aside.configuration input {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.saveContactUserForm aside.configuration label {
+    padding: 0
+}
+.saveContactUserForm label {
+    display: inline-block;
+    width: auto;
+    min-width: 90px;
+    line-height: 18px;
+    margin: 0;
+}
+.saveContactUserForm input {
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+    margin: 10px 0;
+    padding: 5px;
+    line-height: 18px
+}
+
+.siteContent .sections .saveContactUserForm .editor input {
+    width: 50px;
+    min-width: 78px;
+    line-height: 18px;
+    margin: 0
+}
+.saveContactUserForm input[type='checkbox'] {
+    display: inline-block;
+}
 
 /* Blog */
 .blog {

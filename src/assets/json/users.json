@@ -57,42 +57,114 @@
 		},
 		{
 			"id": 3,
-			"menuId": "Item3",
-			"menuContentId": "section3",
+			"menuId": "Item4",
+			"menuContentId": "section4",
 			"link": {
 				"href": "#",
-				"title": "Item3",
+				"title": "Item4",
 				"target": ""
 			},
-			"textColor": "defaultDark",
 			"className": "",
 			"content": {
-				"menuRef": "section3",
-				"class": "team",
-				"header": "Item3",
-				"subtitle": "Meet our Team",
-				"members": [
-					{
-						"id": 1,
-						"name": "Reid Pilch",
-						"designation": "Managing Director"
-					},
-					{
-						"id": 2,
-						"name": "Kevin Qian",
-						"designation": "Principal of Consulting"
-					},
-					{
-						"id": 3,
-						"name": "Julia Loughlin",
-						"designation": "Principal of Human Resources"
-					},
-					{
-						"id": 4,
-						"name": "Walter Wong",
-						"designation": "Principal of Business Development"
+				"menuRef": "section4",
+				"template": "section4.tmpl.html",
+				"class": "contact",
+				"header": "Item4",
+				"subtitle": "Please fill out the following form and we will respond as soon as possible.",
+				"formElements": {
+					"action" : "/us/buy-iphone/iphone6",
+				    "method" : "get",
+				    "namespace" : "urls-aspen",
+				    "fields" : {
+					      "items" : [ 
+					      	{
+						        "index" : 1,
+						        "elemType": "input",
+						        "label": "Name",
+						        "isVisible": true,
+						        "attributes" : {
+						          	"name":"name",
+									"type":"text",
+									"placeholder":"Enter your name",
+									"value":""
+						        }
+						    }, 
+						    {
+						        "index" : 2,
+						        "elemType": "input",
+						        "label": "Phone",
+						        "isVisible": true,
+						        "attributes" : {
+						          	"name":"phone",
+									"type":"text",
+									"placeholder":"Enter your phone number",
+									"value":""
+						        }
+					      	}, 
+						    {
+						        "index" : 3,
+						        "elemType": "input",
+						        "label": "Email",
+						        "isVisible": true,
+						        "attributes" : {
+						          	"name":"email",
+									"type":"text",
+									"placeholder":"Enter your email address",
+									"value":""
+						        }
+					      	},  
+						    {
+						        "index" : 4,
+						        "elemType": "text",
+						        "label": "Message",
+						        "isVisible": false,
+						        "attributes" : {
+						          	"name":"message",
+									"type":"test",
+									"placeholder":"Your comment goes here",
+									"value":""
+						        }
+					      	}, 
+						    {
+						        "index" : 5,
+						        "elemType": "input",
+						        "isVisible": true,
+						        "attributes" : {
+						          	"name":"submit",
+									"type":"submit",
+									"placeholder": "Submit",
+									"value":"Submit"
+						        }
+					      	}
+					    ],
+					    "configuration": [
+					    	{
+						        "index" : 1,
+						        "elemType": "input",
+						        "label": "Form Confirmation Message",
+						        "isVisible": true,
+						        "attributes" : {
+						          	"name":"confirmationMsg",
+									"type":"text",
+									"placeholder":"Your confirmation msg",
+									"value":""
+						        }
+					      	},
+					      	{
+						        "index" : 2,
+						        "elemType": "input",
+						        "label": "Recipient Mail ID",
+						        "isVisible": true,
+						        "attributes" : {
+						          	"name":"recipient",
+									"type":"text",
+									"placeholder": "Recipient Mail Id",
+									"value":""
+						        }
+					      	}
+					    ]
 					}
-				]
+				}
 			}
 		}
 	]
