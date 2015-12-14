@@ -1,4 +1,5 @@
 require("../../../src/app/router.js");
+require("../../../src/assets/scripts/carousel.js");
 require("../../../src/app/common/common.js");
 require("../../../src/app/common/models/home-model.js");
 require("../../../src/app/common/models/edit-model.js");
