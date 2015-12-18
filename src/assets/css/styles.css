@@ -652,6 +652,7 @@ body.loading .modal {
 .editPage .editArea .topNav {
     text-align: left;
     height: 52px;
+    overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0;
@@ -670,28 +671,54 @@ body.loading .modal {
     background-color: #009688;
     color: #fff;
     display: inline-block;
+    float: left;
+}
+.editPage .editArea .menuDetails {
+    margin-left: 220px;
+    display: block;
+    overflow: hidden;
 }
 .editPage .editArea .topNav .sliderToggleBtn {
     display: inline-block;
-    padding: 11px 15px;
+    padding: 15px;
     vertical-align: top;
     font-size: 20px;
 }
 .editPage .editArea .topMenuWrapper {
-    width: 68%;
+    margin-left: 98px;
+    margin-right: 200px;
+    display: block;
+}
+.editPage .editArea .userIcons {
     display: inline-block;
+    vertical-align: top;
+    float: right;
+    width: 200px;
+    margin-top: -55px;
+} 
+.editPage .editArea .settingsIcon {
+    display: inline-block;
+    vertical-align: top;
+    width: 98px;
+    float: left;
 }
 .editPage .editArea .userProfile {
     display: inline-block;
     vertical-align: top;
     padding: 11px 15px;
     font-size: 20px;
-    position: absolute;
-    right: 0px;
-    top: 0;
+    text-decoration: none;
+    width: 162px;
 }
 .editPage .editArea .userProfile span {
     font-size: 14px;
+}
+.editPage .editArea .logout {
+    display: inline-block;
+    padding: 15px 15px 15px 0;
+    vertical-align: top;
+    font-size: 20px;
+    text-decoration: none;
 }
 .editPage .editArea .topNav ul {
     overflow: hidden;
@@ -1090,4 +1117,8 @@ body.loading .modal {
     width: 100%;
     height: 400px;
     margin: -50px 0px;
+}
+
+#section1 {
+    background-color: pink
 }

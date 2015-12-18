@@ -140,6 +140,18 @@ angular.module('angularTest')
         $scope.locationMap = {};
     };
 
+    $scope.sortingLog = [];
+    $scope.sortableOptions = {
+        // called after a node is dropped
+        stop: function(e, ui) {
+            // var logEntry = {
+            //     ID: $scope.sortingLog.length + 1,
+            //     Text: 'Moved element: ' + ui.item.scope().listItem
+            // };
+            // $scope.sortingLog.push(logEntry);
+        }
+    };
+
 
     var getJSONIndex = function(sectionRef) {
         var currentJSONList = $scope.data.menuList;
