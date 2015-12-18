@@ -1,7 +1,5 @@
 
-angular.module('angularTest', [
-  'ui.router'
-])
+angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable'])
   .constant('LOGIN_URI', 'https://intense-torch-8839.firebaseio.com/')
   .constant('ENDPOINT_URI', './')
   .constant('DIRECTIVE_URI', '/src/app/directive/')
@@ -13,21 +11,27 @@ angular.module('angularTest', [
     $stateProvider
       .state('login', {
         url:'/login',
-        templateUrl: 'src/app/login/login.tmpl.html',
+        templateUrl: '/src/app/login/login.tmpl.html',
         controller: 'LoginCtrl',
-        controllerAs: 'login'
+        controllerAs: 'vm'
+      })
+      .state('register', {
+        url:'/register',
+        templateUrl: '/src/app/register/register.tmpl.html',
+        controller: 'RegisterCtrl',
+        controllerAs: 'vm'
       })
       .state('home', {
         url:'/home',
         views: {
           '': { 
-            templateUrl: 'src/app/home/home.tmpl.html',
+            templateUrl: '/src/app/home/home.tmpl.html',
             controller: 'HomeCtrl',
             controllerAs: 'home'
           },
           // the child views will be defined here (absolutely named)
           'menu@home': { 
-            templateUrl: 'src/app/home/nav.tmpl.html' 
+            templateUrl: '/src/app/home/nav.tmpl.html' 
           }
         }
       })
@@ -39,6 +43,7 @@ angular.module('angularTest', [
             controller: 'EditCtrl',
             controllerAs: 'edit'
           },
+          // the child views will be defined here (absolutely named)
           'sideNav@edit': { 
             templateUrl: '/src/app/edit/sideNav/sideNav.tmpl.html'
           },
@@ -49,8 +54,22 @@ angular.module('angularTest', [
             templateUrl: '/src/app/edit/siteContent/siteContent.tmpl.html'
           }
         }
-      })
-    ;
+      });
+  })
+  .run(function run($rootScope, $location, $cookies, $http) {
+      // keep user logged in after page refresh
+      $rootScope.globals = ($cookies.globals) ? JSON.parse($cookies.globals) || {} : {};
+      if ($rootScope.globals.currentUser) {
+          $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+      }
 
+      $rootScope.$on('$locationChangeStart', function (event, next, current) {
+          // redirect to login page if not logged in and trying to access a restricted page
+          var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+          var loggedIn = $rootScope.globals.currentUser;
+          if (restrictedPage && !loggedIn) {
+              $location.path('/login');
+          }
+      });
   })
 ;

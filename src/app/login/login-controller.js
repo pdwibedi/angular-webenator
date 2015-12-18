@@ -1,67 +1,31 @@
-'use strict';
-
-angular.module('angularTest')
-  .controller('LoginCtrl', function (LoginModel, $state) {
-    var login = this;
-
-    login.loading = false;
-
-    login.user = {
-      email: '',
-      password: '',
-      register: false
-    };
-
-    function register() {
-      UserModel.register({
-          email: login.user.email,
-          password: login.user.password
-      })
-      .then(onLogin)
-      .catch(onError)
-      .finally(onCompletion);
-    }
-
-    function onLogin() {
-      UserModel.login({
-          email: login.user.email,
-          password: login.user.password
-      })
-      .then(onSuccess)
-      .catch(onError)
-      .finally(onCompletion);
-    }
-
-    function onSuccess(result) {
-      $state.go('boards');
-    }
-
-    function onError(reason) {
-      login.error = reason.message;
-    }
-
-    function onCompletion() {
-      login.reset();
-    }
-
-    login.submit = function (user, isValid, isRegistering) {
-      if (isValid) {
-        login.loading = true;
-
-        if (isRegistering) {
-          register();
-        } else {
-          onLogin();
-        }
-      }
-    };
-
-    login.reset = function () {
-      login.loading = false;
-      login.user = {
-        email: '',
-        password: '',
-        register: false
-      };
-    };
-  });
+(function () {
+    'use strict';
+ 
+    angular
+		.module('angularTest')
+		.controller('LoginCtrl', login);
+ 
+	login.$inject = ['$location', 'AuthenticationService', 'FlashService'];
+	function login($location, AuthenticationService, FlashService) {
+		var vm = this;
+        vm.login = login;
+ 
+		(function initController() {
+			// reset login status
+			AuthenticationService.ClearCredentials();
+		})();
+ 
+        function login() {
+			vm.dataLoading = true;
+			AuthenticationService.Login(vm.username, vm.password, function (response) {
+				if (response.success) {
+					AuthenticationService.SetCredentials(vm.username, vm.password);
+					$location.path('/');
+				} else {
+					FlashService.Error(response.message);
+					vm.dataLoading = false;
+				}
+			});
+		};
+	}
+})();
