@@ -25,7 +25,7 @@ angular.module('angularTest')
           $("body").click(function(ev) {
             if(ev.target.nodeType === 1 && $(ev.target).parents(".bubbleInfo").length == 0) {
               $("body").find(".bubbleInfo > div").css("overflow","auto");
-              $("body").find(".bubbleInfo > div").find(".wrapper").css("height", "1px");
+              $("body").find(".bubbleInfo > div").find(".wrapper").css("height", "0px");
             }
           });
 
