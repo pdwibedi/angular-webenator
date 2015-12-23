@@ -32,7 +32,6 @@
 			<li ng-repeat="listItem in data.menuList">
 				<a 
 					href="javascript:void(0);"
-					class="{{$first}}"
 					data="#{{listItem.content.menuRef}}" 
 					title="{{listItem.content.link.title}}" 
 					target="{{listItem.content.link.target}}">
@@ -46,3 +45,8 @@
 		<a href="#/login" class="logout fa fa-sign-out"></a>
 	</div>
 </div>
+<script>
+window.setTimeout(function() {
+	jQuery(".topMenuWrapper ul li").eq(0).addClass("active");
+}, 50);
+</script>

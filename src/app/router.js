@@ -1,5 +1,5 @@
 
-angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable'])
+angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicolors'])
   .constant('LOGIN_URI', 'https://intense-torch-8839.firebaseio.com/')
   .constant('ENDPOINT_URI', './')
   .constant('DIRECTIVE_URI', '/src/app/directive/')

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularTest')
-  .controller('EditCtrl', function ($http, $scope, EditService, staticTemplateService, fileUpload) {
+  .controller('EditCtrl', function ($http, $scope, EditService, staticTemplateService, fileUpload, $rootScope) {
     var edit = this;
     $scope.username = "situ";
     $scope.sampleText = 'f dasf asdfa dfadsf adsfad sfdas fasf dasfas dfdas fadsf adsfads fads fasdf asdfas df';
@@ -23,7 +23,7 @@ angular.module('angularTest')
             $scope.data = data;
             window.scopedData = $scope;
 
-            $scope.contactForm = data.menuList[getJSONIndex("Item4")].content.formElements.fields;
+            // $scope.contactForm = data.menuList[getJSONIndex("Item4")].content.formElements.fields;
     	}).finally(function() {
             // Init Method Call
             $scope.onDataLoaded();   
@@ -63,10 +63,12 @@ angular.module('angularTest')
 
         $(".topNav ul").delegate( "li", "click", function() {
             if($(this).find("a").attr("data")) {
+                $(".topNav ul li").removeClass("active");
                 var top = $($(this).find("a").attr("data")).position().top - 58;
                 $('html,body').animate({
                         scrollTop: top
                 }, 1000);
+                $(this).addClass("active");
                 event.preventDefault();    
             }
         });
@@ -280,7 +282,6 @@ angular.module('angularTest')
             $scope.data.textColor = $(this).val()
             $scope.$apply();
         });
-
 
     })($);
 
