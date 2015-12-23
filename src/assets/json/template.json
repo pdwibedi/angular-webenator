@@ -9,6 +9,10 @@
 				"title": "Item1",
 				"target": ""
 			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": { 
 				"menuRef": "section1",
@@ -37,6 +41,10 @@
 				"title": "Item2",
 				"target": ""
 			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": {
 				"menuRef": "section2",
@@ -54,6 +62,10 @@
 				"href": "#",
 				"title": "Item3",
 				"target": ""
+			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
 			},
 			"className": "",
 			"content": {
@@ -93,6 +105,10 @@
 				"href": "#",
 				"title": "Item4",
 				"target": ""
+			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
 			},
 			"className": "",
 			"content": {
@@ -163,6 +179,10 @@
 				"title": "Item5",
 				"target": ""
 			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": {
 				"menuRef": "section5",
@@ -196,6 +216,10 @@
 				"href": "#",
 				"title": "Item6",
 				"target": ""
+			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
 			},
 			"className": "",
 			"content": {
@@ -231,6 +255,10 @@
 				"title": "Item7",
 				"target": ""
 			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": {
 				"menuRef": "section7",
@@ -255,6 +283,10 @@
 				"href": "#",
 				"title": "Item8",
 				"target": ""
+			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
 			},
 			"className": "",
 			"content": {
@@ -306,6 +338,10 @@
 				"title": "Item9",
 				"target": ""
 			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": {
 				"menuRef": "section9",
@@ -345,6 +381,10 @@
 				"href": "#",
 				"title": "Item10",
 				"target": ""
+			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
 			},
 			"className": "",
 			"content": {
@@ -433,6 +473,10 @@
 			"id": 11,
 			"menuId": "Item11",
 			"menuContentId": "section11",
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": {
 				"menuRef": "section11",
@@ -451,6 +495,10 @@
 			"menuId": "Item12",
 			"menuContentId": "section12",
 			"className": "",
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"content": {
 				"menuRef": "section12",
 				"template": "section12.tmpl.html",

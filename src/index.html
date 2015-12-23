@@ -7,39 +7,15 @@
      <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-colorpicker.css">
 
     <!-- <link rel="stylesheet" href="build/css/edit-feature.css"> -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/miniature.css">
     <link rel="stylesheet" href="assets/css/edit.css">
     <link rel="stylesheet" href="assets/css/theme.css">
-
-  </head>
-  <body ng-controller="EditCtrl as edit" ng-class="{loading:loadingView}" class="defaultTheme">
-    <div class="app-wrap">
-
-      <!-- <div 
-        editable-context 
-        ng-data-model="home.title" 
-        element-type="text"
-        show-static-edit-link="false"
-        show-edit-on-hover="true"
-        >
-      </div> -->
-      
-      <!-- <h5 limit-character-render char-length="30" model-bind="sampleText">{{sampleText}}</h5> -->
-      <!-- <content-item ng-repeat="item in data.test" content="item"></content-item> -->
-      <!-- <input type="text" dl-enter-key="checkIfEnterKeyWasPressed()"; /> -->
-      <!-- <div flexible-section ng-method-binding="callHome();">my name is pritish</div> -->
-
-      <!-- <overlay-component ng-template="section1.tmpl.html"></overlay-component> -->
-      
-      <!-- <input type="file" name="fileToUpload" set-target="body" file-model="myFile"/> -->
-
-      
-
-      <div ui-view class="content"></div>
-    </div>
+    <link rel="stylesheet" href="vendor/css/jquery.minicolors.css">
+    
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -48,7 +24,8 @@
     <script src="https://rawgithub.com/angular-ui/ui-sortable/master/src/sortable.js"></script>
     <script src="http://code.angularjs.org/1.2.13/angular-cookies.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script src="vendor/angular-ui-router.min.js"></script>
+    <script src="vendor/js/jquery.minicolors.js"></script>
+    <script src="vendor/js/angular-ui-router.min.js"></script>
 
     <!-- <script src="build/js/edit-feature.js"></script> -->
     <script src="app/router.js"></script>
@@ -83,7 +60,53 @@
     <script src="app/directive/accordionMenu/accordionMenu-directive.js"></script>
     <script src="app/directive/uploadWidget/uploadWidget-directive.js"></script>
     <script src="app/directive/bubbleInfo/bubbleInfo-directive.js"></script>
+    <script src="app/directive/colorPicker/minicolors-directive.js"></script>
 
+
+  </head>
+  <body ng-controller="EditCtrl as edit" ng-class="{loading:loadingView}" class="defaultTheme">
+    <div class="app-wrap">
+
+      <!-- <div 
+        editable-context 
+        ng-data-model="home.title" 
+        element-type="text"
+        show-static-edit-link="false"
+        show-edit-on-hover="true"
+        >
+      </div> -->
+      
+      <!-- <h5 limit-character-render char-length="30" model-bind="sampleText">{{sampleText}}</h5> -->
+      <!-- <content-item ng-repeat="item in data.test" content="item"></content-item> -->
+      <!-- <input type="text" dl-enter-key="checkIfEnterKeyWasPressed()"; /> -->
+      <!-- <div flexible-section ng-method-binding="callHome();">my name is pritish</div> -->
+
+      <!-- <overlay-component ng-template="section1.tmpl.html"></overlay-component> -->
+      
+      <!-- <input type="file" name="fileToUpload" set-target="body" file-model="myFile"/> -->
+
+      <!-- <div class="form-group">
+        <label for="color-input" class="form-control">Color:</label>
+        <input
+          minicolors="customSettings"
+          id="color-input"
+          class="form-control"
+          type="text"
+          ng-model="input.color">
+      </div> -->
+
+      <script type="text/javascript">
+        //using for example these settings inside your controller
+        // customSettings = {
+        //   control: 'brightness',
+        //   theme: 'bootstrap',
+        //   position: 'bottom left'
+        // };
+
+      </script>
+
+      <div ui-view class="content"></div>
+    </div>
 
   </body>
 </html>

@@ -16,7 +16,11 @@
 				"title": "Item1",
 				"target": ""
 			},
-			"textColor": "defaultDark",
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+				
+			},
 			"className": "",
 			"content": { 
 				"menuRef": "section1",
@@ -45,7 +49,10 @@
 				"title": "Item2",
 				"target": ""
 			},
-			"textColor": "defaultDark",
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
+			},
 			"className": "",
 			"content": {
 				"menuRef": "section2",
@@ -63,6 +70,10 @@
 				"href": "#",
 				"title": "Item4",
 				"target": ""
+			},
+			"textColor": "#0088cc",
+			"backgroundColor": "#fff",
+			"background": {
 			},
 			"className": "",
 			"content": {
