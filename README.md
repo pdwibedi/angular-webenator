@@ -69,10 +69,6 @@ This will do the following things:
 ## RoadMap
 
 
-* Login user authentication to app.
-* Addition of a new template for *"Carousel"*.
-* Addition of a new template for *"Google Map"* with location edit. 
-* Sorting of Menu Items from Left Panel.
 * Contact Form Customization.
 * File Upload using node.
 * App test cases validation using *"karma"*.
