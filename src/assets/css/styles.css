@@ -834,7 +834,6 @@ body.loading .modal {
 }
 /* shop */
 .shop {
-    margin: 50px auto;
 }
 .productContainer {
     height: 150px;
@@ -846,7 +845,6 @@ body.loading .modal {
 }
 /* Team */
 .team {
-    margin: 50px auto;
 }
 .team .teamMembers {
     overflow: hidden;
@@ -873,7 +871,6 @@ body.loading .modal {
 
 /* contact form */
 .contact {
-    margin: 50px auto;
 }
 .contact .form {
     margin: 30px 70px 0;
@@ -974,7 +971,6 @@ body.loading .modal {
 
 /* Blog */
 .blog {
-    margin: 50px auto;
 }
 .blog .blogging {
     text-align: left;
