@@ -57,7 +57,7 @@ gulp.task("jsMove", function() {
     .pipe(gulp.dest("./dist/assets/json/"))
 });
 
-// Clean
+// Clean build folders
 gulp.task('clean', function() {
   return del(['dist/build/*', 'src/build/']);
 });
