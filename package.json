@@ -26,7 +26,10 @@
   },
   "devDependencies": {
     "angular-mocks": "1.3.14",
-    "del": "^2.1.0",
+    "browserify": "^12.0.1",
+    "del": "^2.2.0",
+    "event-stream": "^3.3.2",
+    "glob": "^6.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.1",
@@ -37,6 +40,7 @@
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-minify-css": "^1.2.2",
+    "gulp-node-debug": "0.0.3",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-sass": "^2.0.6",
@@ -47,6 +51,7 @@
     "karma-chrome-launcher": "0.1.3",
     "karma-jasmine": "0.2.2",
     "karma-ng-html2js-preprocessor": "^0.1.2",
-    "karma-phantomjs-launcher": "0.1.4"
+    "karma-phantomjs-launcher": "0.1.4",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
