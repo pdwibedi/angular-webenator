@@ -11,9 +11,12 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     livereload = require('gulp-livereload'),
-    del = require('del');
-    browserify = require('browserify');
-    source = require('vinyl-source-stream');
+    del = require('del'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    glob = require('glob'),
+    path = require('path'),
+    es = require('event-stream');
 
 // html
 gulp.task("html", function() {
@@ -38,14 +41,23 @@ gulp.task('css', function() {
 });
 
 // Scripts
-gulp.task('js', ['lint'], function() {
-  browserify()
-    .require("./src/assets/scripts/edit-feature.js", {entry: true})
-    .bundle()
-    .on("error", function(err) { console.log("Error: "+ err.message); }) 
-    .pipe(source("edit-feature.js"))
-    .pipe(gulp.dest('dist/build/js'))
-    .pipe(gulp.dest('src/build/js'))
+gulp.task('js', ['lint'], function(done) {
+
+    glob("./src/assets/scripts/feature/**/*.js", function(err, files){
+        if(err) {
+           done(err);
+        }
+
+        var tasks = files.map(function(entry){
+            return browserify({ entries: [entry] })
+                .bundle()
+                .pipe(source(path.basename(entry)))
+                .pipe(gulp.dest('./dist/build/js'));
+        });
+
+        es.merge(tasks).on('end', done);
+    });
+
 });
 
 gulp.task("jsMove", function() {
