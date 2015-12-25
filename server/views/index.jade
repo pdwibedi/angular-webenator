@@ -1,0 +1,14 @@
+doctype html
+html(ng-app="angularTest")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width")
+        title=title
+        each font in assert.fonts
+            link(rel="stylesheet", media="screen", href = font)
+        each css in assert.css
+            link(rel="stylesheet", href = css)
+    body
+        div(ui-view, class="content")
+        each js in assert.js
+            script(src = js)

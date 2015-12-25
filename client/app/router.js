@@ -11,13 +11,13 @@ angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicol
     $stateProvider
       .state('login', {
         url:'/login',
-        templateUrl: '/src/app/login/login.tmpl.html',
+        templateUrl: '/client/app/login/login.tmpl.html',
         controller: 'LoginCtrl',
         controllerAs: 'vm'
       })
       .state('register', {
         url:'/register',
-        templateUrl: '/src/app/register/register.tmpl.html',
+        templateUrl: '/client/app/register/register.tmpl.html',
         controller: 'RegisterCtrl',
         controllerAs: 'vm'
       })
@@ -25,13 +25,13 @@ angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicol
         url:'/home',
         views: {
           '': { 
-            templateUrl: '/src/app/home/home.tmpl.html',
+            templateUrl: '/client/app/home/home.tmpl.html',
             controller: 'HomeCtrl',
             controllerAs: 'home'
           },
           // the child views will be defined here (absolutely named)
           'menu@home': { 
-            templateUrl: '/src/app/home/nav.tmpl.html' 
+            templateUrl: '/client/app/home/nav.tmpl.html'
           }
         }
       })
@@ -39,19 +39,19 @@ angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicol
         url:'/edit',
         views: {
           '': { 
-            templateUrl: '/src/app/edit/edit.tmpl.html',
+            templateUrl: '/client/app/edit/edit.tmpl.html',
             controller: 'EditCtrl',
             controllerAs: 'edit'
           },
           // the child views will be defined here (absolutely named)
           'sideNav@edit': { 
-            templateUrl: '/src/app/edit/sideNav/sideNav.tmpl.html'
+            templateUrl: '/client/app/edit/sideNav/sideNav.tmpl.html'
           },
           'topNav@edit': { 
-            templateUrl: '/src/app/edit/topNav/topNav.tmpl.html'
+            templateUrl: '/client/app/edit/topNav/topNav.tmpl.html'
           },
           'siteContent@edit': {
-            templateUrl: '/src/app/edit/siteContent/siteContent.tmpl.html'
+            templateUrl: '/client/app/edit/siteContent/siteContent.tmpl.html'
           }
         }
       });
