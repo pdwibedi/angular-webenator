@@ -1,0 +1,181 @@
+{
+  "theme": "defaultTheme",
+  "users": {
+    "id": 0,
+    "name": "Pritish Dwibedi",
+    "email": "pdwibedi@gmail.com",
+    "phone": "650-279-7677"
+  },
+  "menuList": [
+    {
+      "id": 0,
+      "menuId": "Item1",
+      "menuContentId": "section1",
+      "link": {
+        "href": "#",
+        "title": "Item1",
+        "target": ""
+      },
+      "textColor": "#0088cc",
+      "backgroundColor": "#fff",
+      "background": {
+      },
+      "className": "",
+      "content": {
+        "menuRef": "section1",
+        "template": "section1.tmpl.html",
+        "class": "organizationAbout",
+        "header": "Item1",
+        "subtitle": "sample subheader",
+        "description": [
+          {
+            "head": "The standard Lorem Ipsum passage, used since the 1500s",
+            "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          },
+          {
+            "head": "Section 1.10.33 of \"de Finibus Bonorum et Malorum\", written by Cicero in 45 BC",
+            "paragraph": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "menuId": "Item2",
+      "menuContentId": "section2",
+      "link": {
+        "href": "#",
+        "title": "Item2",
+        "target": ""
+      },
+      "textColor": "#0088cc",
+      "backgroundColor": "#fff",
+      "background": {
+      },
+      "className": "",
+      "content": {
+        "menuRef": "section2",
+        "template": "section2.tmpl.html",
+        "class": "shop",
+        "header": "Item2",
+        "subtitle": "Check out our products"
+      }
+    },
+    {
+      "id": 3,
+      "menuId": "Item4",
+      "menuContentId": "section4",
+      "link": {
+        "href": "#",
+        "title": "Item4",
+        "target": ""
+      },
+      "textColor": "#0088cc",
+      "backgroundColor": "#fff",
+      "background": {
+      },
+      "className": "",
+      "content": {
+        "menuRef": "section4",
+        "template": "section4.tmpl.html",
+        "class": "contact",
+        "header": "Item4",
+        "subtitle": "Please fill out the following form and we will respond as soon as possible.",
+        "formElements": {
+          "action": "/us/buy-iphone/iphone6",
+          "method": "get",
+          "namespace": "urls-aspen",
+          "fields": {
+            "items": [
+              {
+                "index": 1,
+                "elemType": "input",
+                "label": "Name",
+                "isVisible": true,
+                "attributes": {
+                  "name": "name",
+                  "type": "text",
+                  "placeholder": "Enter your name",
+                  "value": ""
+                }
+              },
+              {
+                "index": 2,
+                "elemType": "input",
+                "label": "Phone",
+                "isVisible": true,
+                "attributes": {
+                  "name": "phone",
+                  "type": "text",
+                  "placeholder": "Enter your phone number",
+                  "value": ""
+                }
+              },
+              {
+                "index": 3,
+                "elemType": "input",
+                "label": "Email",
+                "isVisible": true,
+                "attributes": {
+                  "name": "email",
+                  "type": "text",
+                  "placeholder": "Enter your email address",
+                  "value": ""
+                }
+              },
+              {
+                "index": 4,
+                "elemType": "text",
+                "label": "Message",
+                "isVisible": false,
+                "attributes": {
+                  "name": "message",
+                  "type": "test",
+                  "placeholder": "Your comment goes here",
+                  "value": ""
+                }
+              },
+              {
+                "index": 5,
+                "elemType": "input",
+                "isVisible": true,
+                "attributes": {
+                  "name": "submit",
+                  "type": "submit",
+                  "placeholder": "Submit",
+                  "value": "Submit"
+                }
+              }
+            ],
+            "configuration": [
+              {
+                "index": 1,
+                "elemType": "input",
+                "label": "Form Confirmation Message",
+                "isVisible": true,
+                "attributes": {
+                  "name": "confirmationMsg",
+                  "type": "text",
+                  "placeholder": "Your confirmation msg",
+                  "value": ""
+                }
+              },
+              {
+                "index": 2,
+                "elemType": "input",
+                "label": "Recipient Mail ID",
+                "isVisible": true,
+                "attributes": {
+                  "name": "recipient",
+                  "type": "text",
+                  "placeholder": "Recipient Mail Id",
+                  "value": ""
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -4,11 +4,11 @@ html(ng-app="angularTest")
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width")
         title=title
-        each font in assert.fonts
+        each font in assets.fonts
             link(rel="stylesheet", media="screen", href = font)
-        each css in assert.css
+        each css in assets.css
             link(rel="stylesheet", href = css)
     body
         div(ui-view, class="content")
-        each js in assert.js
+        each js in assets.js
             script(src = js)

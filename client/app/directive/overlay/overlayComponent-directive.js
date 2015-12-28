@@ -35,7 +35,7 @@ angular.module('angularTest')
         controller: controller,
         scope: true,
         templateUrl: function(el, attrs) {
-        	return "/src/app/directive/renderTemplate/"+attrs.ngTemplate;
+        	return "/app/directive/renderTemplate/"+attrs.ngTemplate;
         }
     };
   })

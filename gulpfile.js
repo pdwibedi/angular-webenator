@@ -16,40 +16,41 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     glob = require('glob'),
     path = require('path'),
-    es = require('event-stream');
+    es = require('event-stream'),
+    nodemon = require('gulp-nodemon');
 
 // html
-gulp.task("html", function() {
+gulp.task("html", function () {
     gulp.src("./src/**/*.html")
-    .pipe(gulp.dest("./dist"))
+        .pipe(gulp.dest("./dist"))
 });
 
 // LINT
 gulp.task('lint', function () {
-  return gulp.src(['./src/*/*.js', '!./src/vendor/*'])
-  .pipe(jshint())
-  .pipe(jshint.reporter('default', { verbose: true }))
-  .pipe(jshint.reporter('fail'));
+    return gulp.src(['./src/*/*.js', '!./src/vendor/*'])
+        .pipe(jshint())
+        .pipe(jshint.reporter('default', {verbose: true}))
+        .pipe(jshint.reporter('fail'));
 });
 
 // Styles
-gulp.task('css', function() {
-  gulp.src('./src/assets/css/edit-feature.css')
-    .pipe(concatCss("edit-feature.css"))
-    .pipe(gulp.dest('dist/build/css'))
-    .pipe(gulp.dest('src/build/css'));
+gulp.task('css', function () {
+    gulp.src('./src/assets/css/edit-feature.css')
+        .pipe(concatCss("edit-feature.css"))
+        .pipe(gulp.dest('dist/build/css'))
+        .pipe(gulp.dest('src/build/css'));
 });
 
 // Scripts
-gulp.task('js', ['lint'], function(done) {
+gulp.task('js', ['lint'], function (done) {
 
-    glob("./src/assets/scripts/feature/**/*.js", function(err, files){
-        if(err) {
-           done(err);
+    glob("./src/assets/scripts/feature/**/*.js", function (err, files) {
+        if (err) {
+            done(err);
         }
 
-        var tasks = files.map(function(entry){
-            return browserify({ entries: [entry] })
+        var tasks = files.map(function (entry) {
+            return browserify({entries: [entry]})
                 .bundle()
                 .pipe(source(path.basename(entry)))
                 .pipe(gulp.dest('./dist/build/js'));
@@ -60,22 +61,22 @@ gulp.task('js', ['lint'], function(done) {
 
 });
 
-gulp.task("jsMove", function() {
+gulp.task("jsMove", function () {
     gulp.src("./src/router.js")
-    .pipe(gulp.dest("./dist"))
+        .pipe(gulp.dest("./dist"))
     gulp.src("./src/vendor/*")
-    .pipe(gulp.dest("./dist/vendor/"))
+        .pipe(gulp.dest("./dist/vendor/"))
     gulp.src("./src/assets/json/*")
-    .pipe(gulp.dest("./dist/assets/json/"))
+        .pipe(gulp.dest("./dist/assets/json/"))
 });
 
 // Clean
-gulp.task('clean', function() {
-  return del(['dist/build/*', 'src/build/']);
+gulp.task('clean', function () {
+    return del(['dist/build/*', 'src/build/']);
 });
 
 //Watch
-gulp.task("watch", function(){
+gulp.task("watch", function () {
     gulp.watch("./src/**/*.js", ["js"]);
     gulp.watch("./src/**/*.js", ["jsMove"]);
     // gulp.watch("./src/**/*.html", ["html"]);
@@ -83,15 +84,28 @@ gulp.task("watch", function(){
 });
 
 // Connect Server Setup
-gulp.task('connect', function() {
+gulp.task('connect', function () {
     connect.server();
 });
 
-// Default task
-gulp.task('default', ['clean', /* 'html',*/ 'js', 'jsMove', 'css', 'connect', 'watch'], function() {
-// gulp.task('default', ['js', 'connect', 'watch'], function() {
-// gulp.task('default', ['connect'], function() {
-    console.log("Done");
+gulp.task('start', function () {
+    // server runs on port: 3000 by default port can re-configured in
+    // server/config.js file
+    nodemon({
+        script: 'server/server.js',
+        ext: 'js html jade',
+        evn: {'NODE_ENV': 'development'}
+    });
 });
+
+gulp.task('default', ['start'], function () {
+});
+
+// Default task
+//gulp.task('default', ['clean', /* 'html',*/ 'js', 'jsMove', 'css', 'connect', 'watch'], function() {
+//// gulp.task('default', ['js', 'connect', 'watch'], function() {
+//// gulp.task('default', ['connect'], function() {
+//    console.log("Done");
+//});
  
 

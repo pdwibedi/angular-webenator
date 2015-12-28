@@ -2,40 +2,49 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 var path = require('path');
-var routes = require('./routes/app.routes');
-var apiRoutes = require('./routes/api.routes');
-var server = require('./server');
+var appRouter = require('./routes/app.routes');
+var userRouter = require('./routes/user.routes');
+var config = require('./config');
 
-// create app instance
-var app = express();
+module.exports.views = function(app) {
+    // setup views
+    app.set('views', path.join(__dirname, 'views'));
+    app.set('view engine', 'jade');
+};
 
-// setup views
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+module.exports.logger = function(app){
+    // attach middleware
+    app.use(logger('dev')); // set log mode to dev defualt
+};
 
-// attach middleware
-app.use(logger('dev')); // set log mode to dev
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+module.exports.parser = function(app) {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: false}));
+};
 
-// client setup
-app.use(express.static(path.join('../', __dirname, 'client')));
+module.exports.client = function(app) {
+    // client setup
+    app.use(express.static(path.join(__dirname, '../', 'client')));
+};
 
-// routes config
-app.use('/', routes);
-app.use('/api', apiRoutes);
+module.exports.router = function(app) {
+    // routes config
+    app.use('/', appRouter);
+    app.use('/api/user', userRouter);
+};
 
-// handle errors
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: err
+module.exports.errorHandler = function(app) {
+    // handle errors
+    app.use(function (err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
     });
-});
+};
 
-// initialize server
-server.init(app);
-// start the server
-server.start(app);
-
+// setup local variable will be accessible across the app including views
+module.exports.locals = function(app){
+    app.locals.assets = config.client.assets;
+}
