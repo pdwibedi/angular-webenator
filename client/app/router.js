@@ -2,7 +2,7 @@
 angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicolors'])
   .constant('LOGIN_URI', 'https://intense-torch-8839.firebaseio.com/')
   .constant('ENDPOINT_URI', './')
-  .constant('DIRECTIVE_URI', '/src/app/directive/')
+  .constant('DIRECTIVE_URI', '/app/directive/')
   .constant('SITE_SECTION_URI', '/src/app/edit/')
   .constant('USER_UPLOADS', '/src/assets/userUploads/')
   .config(function ($stateProvider, $urlRouterProvider) {
@@ -11,13 +11,13 @@ angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicol
     $stateProvider
       .state('login', {
         url:'/login',
-        templateUrl: '/src/app/login/login.tmpl.html',
+        templateUrl: '/app/login/login.tmpl.html',
         controller: 'LoginCtrl',
         controllerAs: 'vm'
       })
       .state('register', {
         url:'/register',
-        templateUrl: '/src/app/register/register.tmpl.html',
+        templateUrl: '/app/register/register.tmpl.html',
         controller: 'RegisterCtrl',
         controllerAs: 'vm'
       })
@@ -25,13 +25,13 @@ angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicol
         url:'/home',
         views: {
           '': { 
-            templateUrl: '/src/app/home/home.tmpl.html',
+            templateUrl: '/app/home/home.tmpl.html',
             controller: 'HomeCtrl',
             controllerAs: 'home'
           },
           // the child views will be defined here (absolutely named)
           'menu@home': { 
-            templateUrl: '/src/app/home/nav.tmpl.html' 
+            templateUrl: '/app/home/nav.tmpl.html'
           }
         }
       })
@@ -39,19 +39,19 @@ angular.module('angularTest', ['ui.router', 'ngCookies', 'ui.sortable', 'minicol
         url:'/edit',
         views: {
           '': { 
-            templateUrl: '/src/app/edit/edit.tmpl.html',
+            templateUrl: '/app/edit/edit.tmpl.html',
             controller: 'EditCtrl',
             controllerAs: 'edit'
           },
           // the child views will be defined here (absolutely named)
           'sideNav@edit': { 
-            templateUrl: '/src/app/edit/sideNav/sideNav.tmpl.html'
+            templateUrl: '/app/edit/sideNav/sideNav.tmpl.html'
           },
           'topNav@edit': { 
-            templateUrl: '/src/app/edit/topNav/topNav.tmpl.html'
+            templateUrl: '/app/edit/topNav/topNav.tmpl.html'
           },
           'siteContent@edit': {
-            templateUrl: '/src/app/edit/siteContent/siteContent.tmpl.html'
+            templateUrl: '/app/edit/siteContent/siteContent.tmpl.html'
           }
         }
       });
