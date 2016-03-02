@@ -1,0 +1,111 @@
+<!doctype html>
+<html ng-app="angularTest">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Webenator</title>
+     <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <!-- <link rel="stylesheet" href="build/css/edit-feature.css"> -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/miniature.css">
+    <link rel="stylesheet" href="assets/css/edit.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="vendor/css/jquery.minicolors.css">
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://rawgithub.com/angular-ui/ui-sortable/master/src/sortable.js"></script>
+    <script src="http://code.angularjs.org/1.2.13/angular-cookies.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="vendor/js/jquery.minicolors.js"></script>
+    <script src="vendor/js/angular-ui-router.min.js"></script>
+
+    <!-- <script src="build/js/edit-feature.js"></script> -->
+    <script src="app/router.js"></script>
+    <script src="app/common/common.js"></script>
+    <script src="app/common/models/home-model.js"></script>
+    <script src="app/common/models/edit-model.js"></script>
+
+
+    <!-- Login Code -->
+    <script src="app/common/services/auth-service.js"></script>
+    <script src="app/common/services/flash-service.js"></script>
+    <!-- Real user service that uses an api -->
+    <!-- <script src="app/common/services/user-service.js"></script> -->
+
+    <!-- Fake user service for demo that uses local storage -->
+    <script src="app/common/services/user-service-local-storage.js"></script>
+    <script src="app/login/login-controller.js"></script>
+    <script src="app/register/register-controller.js"></script>
+
+    <!-- <script src="build/js/edit-feature.js"></script> -->
+    <script src="assets/scripts/carousel.js"></script>
+    <script src="app/common/models/static-template-model.js"></script>
+    <script src="app/common/services/file-upload-service.js"></script>
+    <script src="app/home/home-controller.js"></script>
+    <script src="app/edit/edit-controller.js"></script>
+    <script src="app/directive/renderTemplate/renderTemplate-directive.js"></script>
+    <script src="app/directive/editableContent/editableContent-directive.js"></script>
+    <script src="app/directive/renderTemplateMiniature/renderTemplateMiniature-directive.js"></script>
+    <script src="app/directive/limitCharacterRender/limitCharacterRender-directive.js"></script>
+    <script src="app/directive/flexibleSection/flexibleSection-directive.js"></script>
+    <script src="app/directive/overlay/overlayComponent-directive.js"></script>
+    <script src="app/directive/accordionMenu/accordionMenu-directive.js"></script>
+    <script src="app/directive/uploadWidget/uploadWidget-directive.js"></script>
+    <script src="app/directive/bubbleInfo/bubbleInfo-directive.js"></script>
+    <script src="app/directive/colorPicker/minicolors-directive.js"></script>
+
+
+  </head>
+  <body ng-controller="EditCtrl as edit" ng-class="{loading:loadingView}" class="defaultTheme">
+    <div class="app-wrap">
+
+      <!-- <div 
+        editable-context 
+        ng-data-model="home.title" 
+        element-type="text"
+        show-static-edit-link="false"
+        show-edit-on-hover="true"
+        >
+      </div> -->
+      
+      <!-- <h5 limit-character-render char-length="30" model-bind="sampleText">{{sampleText}}</h5> -->
+      <!-- <content-item ng-repeat="item in data.test" content="item"></content-item> -->
+      <!-- <input type="text" dl-enter-key="checkIfEnterKeyWasPressed()"; /> -->
+      <!-- <div flexible-section ng-method-binding="callHome();">my name is pritish</div> -->
+
+      <!-- <overlay-component ng-template="section1.tmpl.html"></overlay-component> -->
+      
+      <!-- <input type="file" name="fileToUpload" set-target="body" file-model="myFile"/> -->
+
+      <!-- <div class="form-group">
+        <label for="color-input" class="form-control">Color:</label>
+        <input
+          minicolors="customSettings"
+          id="color-input"
+          class="form-control"
+          type="text"
+          ng-model="input.color">
+      </div> -->
+
+      <script type="text/javascript">
+        //using for example these settings inside your controller
+        // customSettings = {
+        //   control: 'brightness',
+        //   theme: 'bootstrap',
+        //   position: 'bottom left'
+        // };
+
+      </script>
+
+      <div ui-view class="content"></div>
+    </div>
+
+  </body>
+</html>
